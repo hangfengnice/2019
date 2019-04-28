@@ -4,4 +4,5 @@ A : 2019.4.28.html与2019.4.28.css 中的一些注意点；
 2. class命名不要镶嵌；
 
 感谢zhangxianxu 大牛，以上借鉴了他的css4基础测试。
-[demo](https://jsbin.com/gusazek/edit?html,css,output)
+
+在线[demo](https://jsbin.com/gusazek/edit?html,css,output)
