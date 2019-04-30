@@ -1,0 +1,48 @@
+dl {
+    line-height: 1.5;
+    margin: 0; padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;    
+}
+dd {
+    word-break: break-all;    
+    text-align: right;
+    margin-left: 0;
+}
+dd:empty::before {
+    content: '-';    
+    color: #999;
+}
+/* dt{
+    position: absolute;
+
+}
+dd{
+    margin-left: 5em;
+} */
+
+/* flex */
+/* dl{
+    display: flex;
+}
+dt{
+    width: 5em;
+}
+dd{
+    width: calc(100% - 5em);
+} */
+
+/* 浮动 */
+/* dt{
+    width: 5em;
+    float: left;
+}
+dd{
+    overflow: hidden;
+} */
+
+/* 高手 */
+dd {
+    margin: -1.5em 0 0 5em;    
+}
+
