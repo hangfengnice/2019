@@ -23,31 +23,14 @@
 ### 两栏布局
 
 
-
-
-
-
-# nihao
-| table | 
-
-> nihao
-henhao
-
-> nihao  
-henhoa
-
-niaho 
-henhao  
-nihao  
-henhao
-
-这是代码快  
-
-  console('a')
-
 ```
 console.log('yingying 最棒')；
-```
+```  
+  
+你好  
+
+    
+
 
 
 
