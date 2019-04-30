@@ -1,0 +1,72 @@
+
+2019.4.29
+
+1.respository
+2.mkdir make directory 建立mulu
+3.cd     change directory
+4.init  	初始化
+5.initialized    初始值
+6.ls  		当前列表
+7.modified.     修改
+8.discard       抛弃
+9.staged        暂存区
+10.diff         difference 不同
+11.cat          显示内容大小以及信息
+12.git log      修改信息
+13.git reflog    删除的也可以看到
+14.untracked      未追踪到的
+15.mutable       可变的
+
+2019.4.30
+
+1 $ mkdir learngit   make directory    创建新目录
+2 $ cd  learngit     change directory  理解为对该文件夹进行操作
+3 $ pwd                                显示当前目录
+4 $ git init                           将目录变成git可以管理的仓库
+5 $ git vi <filename>                  可以对filename进行编辑，进入编辑页面，先按ℹ️，进行想要的操作，按esc退出编辑状态，输入：wq退出编辑页面
+6 $ git add <filename>                 提交文件到暂存区
+7 $ git commit -m " "                  将文件提交到仓库，引号里面是本次提交的说明 
+8 $ git status                         查看结果，查看工作区的状态
+9 $ git diff                           查看文件有什么不同，即difference
+10 $ git log                           显示从最近到最远的提交日志
+11 $ git reset --hard HEAD^            回到上一个版本
+12 $ cat <filename>                    显示文件的内容
+13 $ git reset --hard commit.id        回到版本为id的版本
+14 $ git reflog                        即使关过机也能查到命令历史
+15 $ git diff HEAD -- <filename>       可以查看工作区和版本库里面最新版本的区别
+16 $ git checkout -- <filename>        丢弃工作区的修改
+17 $ git reset HEAD <file>             把暂存区的修改撤销掉，重新放回工作区
+18 $ git rm <filename>
+   $ git commit -m " "                 文件从版本库中删除      
+19 $ git rm <filename>
+   $ git checkout -- <filename>        还原跟没删一样
+20 $ git remote add origin git@github.com:<your github name>/<filename>.git
+   $ git push -u origin master         把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+                                       由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的     
+                                       master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+21 $ git push origin master            把最新修改提交到github
+22 $ git branch dev + $ git checkout dev 
+== $ git checkout -b dev               创建dev分支，切换到dev分支
+                                       
+23 $ git branch                        查看当前分支
+24 $ git merge dev                     合并分支dev
+25 $ git branch -d <name>              删除分支
+26 $ git log                           可以看到分支的合并情况
+27 $ git merge --no-ff -m "merge with no-ff" dev
+                                      合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合            
+                                      并就看不出来曾经做过合并
+28 $ git stash                        保存当前内容
+   $ git stash list                   查看保存的状态
+   $ git stash apply                  恢复 ，不删stash内容
+   $ git stash drop                   删stash内容
+   $ git stash pop                    恢复，且删stash内容
+   $ git stash apply stash@{0}        多个stash时，恢复到指定stash
+29 $ git branch -D <filename>         强制删除文件
+30 $ git remote -v                    查看远程库信息
+31.$ git push origin branch-name      从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+   $ git pull                         在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支 
+   $ git checkout -b branch-name origin/branch-name                                   
+                                      的名称最好一致；
+   $ git branch --set-upstream-to=origin/branch-name branch-name
+                                      建立本地分支和远程分支的关联，使用git branch --set-upstream-to=origin/branch-name branch-name；
+                                      从远程抓取分支，使用git pull，如果有冲突，要先处理冲突  
