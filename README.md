@@ -16,7 +16,7 @@
 1. 不用outline实现选中状态，影响键盘选中；
 2. 存在问题，当前使用radio，不过也影响了键盘选中；
 
-感谢zhangxianxu 大牛，以上借鉴了他的css5基础测试.
+> 感谢zhangxianxu 大牛，以上借鉴了他的css5基础测试.
 
 [2019.4.30的在线demo](https://jsbin.com/bufulek/1/edit?html,css,output)
 主要内容
