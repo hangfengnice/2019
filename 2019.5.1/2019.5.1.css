@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+}
+.icon-delete {
+  position: relative;
+  margin-top: 1em;
+  
+  display: inline-block;
+}
+[data-title]::before {
+  content: attr(data-title);
+  
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: .5em;
+  visibility: hidden;
+  display: inline-block;
+  /* pointer-events: none; */
+  transition: visibility .01s .2s;
+
+
+}
+[data-title]::after {
+  content: "";
+  border: 0.5em solid;
+  border-color: #000 transparent  transparent;
+  position: absolute;
+  right: 28%;
+  bottom:100%;
+  margin-bottom: -.5em;
+  /* pointer-events: none; */
+  transition: visibility .01s .2s;
+  visibility: hidden;
+}
+[data-title]:hover::before,
+[data-title]:hover::after,
+[data-title]:focus::before,
+[data-title]:focus::after {
+  visibility: visible;
+}
