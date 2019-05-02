@@ -37,7 +37,22 @@ dd:empty::before {
 ```
   1. pointer-events: none;
   2. transition: visibility 0.01s 0.2s;  
-```
+``` 
+  
+  
+#### [2019.5.2在线demo](https://jsbin.com/namizim/edit?html,output)  
+主要内容  
+### 表单登录  
++ 亮点  
+**1. 使用form、submit、键盘enter按下时能形成提交。  
+  2. 使用fielset.lengend。**
+**3. name  
+  4. required 验证。
+**5. autocomplete = 'off'.
+  6. tabindex,autofocus.
+**7. type = 'text',可以省略.
+  8. 忘记密码，立即注册使用a标签，可以键盘focus.
+  
 
 
 
