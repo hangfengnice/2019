@@ -51,7 +51,12 @@ dd:empty::before {
 **5. autocomplete = 'off'.  
   6. tabindex,autofocus.**  
 **7. type = 'text',可以省略.  
-  8. 忘记密码，立即注册使用a标签，可以键盘focus.**
+  8. 忘记密码，立即注册使用a标签，可以键盘focus.** . 
+  
+  
+  
+  mac 代码块右移 shift + table
+  
   
 
 
