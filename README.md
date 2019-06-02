@@ -55,7 +55,9 @@ dd:empty::before {
   
   
   
-  mac 代码块右移 shift + table
+  mac 代码块右移 shift + table  
+  desktop打开搜索框  command + space 
+  
   
   
 
