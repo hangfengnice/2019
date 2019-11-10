@@ -62,7 +62,6 @@ dd:empty::before {
   
 
 
-  
 
     
 
@@ -75,6 +74,7 @@ dd:empty::before {
 
 
 
+## 文本区域
 
-
-
+- 防止拖拽文本域
+  - resize: none;

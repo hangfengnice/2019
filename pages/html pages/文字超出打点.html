@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>文字超出打点</title>
+  <style>
+    .oneline {
+      width: 100px;
+      border:1px solid skyblue;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .moreline {
+      width: 100px;
+      border:1px solid skyblue;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+  <p class="oneline">hello hangfeng </p>
+
+  <p class="moreline">我 是 多行打点的小兄弟 嘿嘿 加油</p>
+</body>
+</html>

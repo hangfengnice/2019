@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>热点图</title>
+  <style>
+    .map {
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+      border: 1px solid skyblue;
+      position: relative;
+    }
+    .city {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    .dotted {
+      width: 8px;
+      height: 8px;
+      background: skyblue;
+    }
+    div[class^="pulse"] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      box-shadow: 0 0 12px skyblue;
+      border-radius: 50%;
+      border: 1px solid skyblue;
+      border-radius: 50%;
+    }
+    @keyframes pulse {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        width: 40px;
+        height: 40px;
+        /* transform: scale(5); */
+      }
+    }
+    .pulse1 {
+      animation: pulse 1.5s infinite;
+    }
+    .pulse2 {
+      animation: pulse 1.5s 0.5s infinite;
+    }
+    .pulse2 {
+      animation: pulse 1.5s 0.5s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="map">
+    <div class="city">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+  </div>
+</body>
+</html>
