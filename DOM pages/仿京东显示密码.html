@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>京东显示密码</title>
+  <link rel="stylesheet" href="../bootstrap utils/css/bootstrap.css">
+  <style>
+    .box {
+      position: relative;
+      width: 400px;
+      border-bottom: 1px solid skyblue;
+      margin: 100px auto;
+    }
+    .box input {
+      width: 370px;
+      height: 30px;
+      border: 0;
+      outline: 0;
+      user-select: none;
+    }
+    .box span {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+      <!-- glyphicon-eye-open -->
+    <label for="password"><span class="glyphicon glyphicon-eye-close" id="eye"></span></label>
+    <input type="password" id='password' >
+  </div>
+  <script>
+    let eye = document.getElementById('eye')
+    let psd = document.getElementById('password')
+    let flag = 0
+    eye.onclick = function () {
+      if (flag === 0) {
+        psd.type = 'text'
+        flag = 1
+      } else {
+        psd.type = 'password'
+        flag = 0
+      }
+      this.classList.toggle("glyphicon-eye-close")
+      this.classList.toggle("glyphicon-eye-open")
+    }
+  </script>
+</body>
+</html>

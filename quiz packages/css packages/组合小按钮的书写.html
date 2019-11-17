@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>组合小按钮的书写</title>
+</head>
+<body>
+  
+  <!-- 
+    1. 90后都快30岁了，所以，按钮，我们没有任何理由使用<a>标签，除非你要兼容IE7，所以标签使用应该是 button + a。
+    2. 可以考虑多按钮，多链接时候的样式表现，会更健壮，扩展性更强。
+    3. 每个按钮组是不能换行的，按钮组可以使用flex布局，如果考虑兼容，可以里面内联 + white-space:nowrap;
+    4. 按钮组的实现方法，大家实现有3种（inline-block，float，inline-flex），如果考虑要点3， float布局是不推荐的，因为当下是无法阻止float内容不换行的。table布局其实是上上之选，天然一行显示，兼容到IE8。
+    5. 每个按钮控制不要使用标签选择器，而是树结构伪类，例如:first-child，:last-child，例如圆角：:first-child{border-radius: 3px 0 0 3px;}:last-child{border-radius: 0 3px 3px 0;}。此时就非常强，不要使用标签以及类名进行判断。
+    6. 同样的，中间的线要走合并，每一个元素都要有完整的边框，（如margin负值合并），而不是根据标签类型进行缺省。
+  -->
+</body>
+</html>

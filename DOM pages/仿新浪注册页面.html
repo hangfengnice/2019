@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新浪注册页面</title>
+  <link rel="stylesheet" href="../bootstrap utils/css/bootstrap.css">
+  <style>
+    div {
+      width: 600px;
+      margin: 100px auto;
+    }
+    .message {
+      display: inline-block;
+      font-style: 12px;
+      color: skyblue;
+    }
+    .error {
+      color: red ; 
+    }
+  </style>
+</head>
+<body>
+  <div class="register">
+    <input type="password" id='password' >
+    <span class="glyphicon glyphicon-info-sign" id="eye"></span>
+    <p class="message">请输入6～16位密码</p>
+  </div>
+  <script>
+    let eye = document.getElementById('eye')
+    let psd = document.getElementById('password')
+    let message = document.querySelector('.message')
+    psd.onblur = function () {
+      if (this.value.length > 16 || this.value.length < 6) {
+        message.classList.add('error')
+        eye.classList.remove('glyphicon-info-sign')
+        eye.classList.add('glyphicon-remove-circle')
+
+      }
+    }
+  </script>
+</body>
+</html>

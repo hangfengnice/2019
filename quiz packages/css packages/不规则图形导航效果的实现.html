@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>不规则图形导航效果的实现</title>
+    <style>
+      .step {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 0;
+        overflow: auto;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      .step a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* 拓展可点击区域 */
+      .step a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1em;
+        bottom: 0;
+        right: -1em;
+      }
+
+      .step li {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1em;
+        background-color: #edf9ff;
+        color: #009fe9;
+        padding: 1em 0.5em 1em 1em;
+        position: relative;
+      }
+
+      .step li + li {
+        margin-left: 1.4em;
+      }
+
+      .step li:first-child {
+        border-left: 1em solid transparent;
+      }
+
+      .step li:after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -1.5em;
+        height: 0;
+        border-top: 1.5em solid transparent;
+        border-bottom: 1.5em solid transparent;
+        border-left: 1.2em solid #edf9ff;
+      }
+
+      .step li:before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        margin-top: -1.5em;
+        height: 0;
+        border-top: 1.5em solid #edf9ff;
+        border-bottom: 1.5em solid #edf9ff;
+        border-left: 1.2em solid transparent;
+      }
+
+      .step li:hover,
+      .step ._current {
+        background-color: #009fe9;
+        color: #ffffff;
+      }
+
+      .step li:hover:after,
+      .step ._current:after {
+        border-left-color: #009fe9;
+      }
+
+      .step li:hover:before,
+      .step ._current:before {
+        border-top-color: #009fe9;
+        border-bottom-color: #009fe9;
+      }
+
+      .step ._current ~ li {
+        background-color: #ebedf0;
+        color: #8c8c8c;
+      }
+
+      .step ._current ~ li:after {
+        border-left-color: #ebedf0;
+      }
+
+      .step ._current ~ li:before {
+        border-top-color: #ebedf0;
+        border-bottom-color: #ebedf0;
+      }
+      div {
+        border-top: 10px solid red;
+        border-bottom: 10px solid red;
+        border-left: 10px solid transparent;
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ol class="step">
+      <li><a href="#" title="规则说明">1-规则说明</a></li>
+      <li><a href="#" title="参与活动">2-参与活动</a></li>
+      <li class="_current">3-参与抽奖</li>
+      <li>4-奖品发放</li>
+      <li>5-查看结果</li>
+    </ol>
+    <div></div>
+
+    <!-- 
+      1. 就本题而言，就实际开发而言，反序是没有必要的。因为会常驻选中类名，DOM顺序是1-5也是可以实现样式控制的。所有列表 淡蓝, .active 高亮深天空蓝，~后面的灰色。给前面的状态添加一个独立的类名是会增加实际开发的复杂度，是不推荐的，应该活用选择器的一些技术降低我们的维护成本。
+      2. 应该是1/2尺寸图。考虑下不要掉下来。
+      3. 三角的实现，三类方法：
+        1) clip-path：最容易理解，比较符合现实认知，推荐百分比控制（无论尺寸大小形状都OK），最大的问题：兼容性，IE全军覆没，移动端可以使用。
+        2) border: 切图前端必备技能。https://www.zhangxinxu.com/wordpress/?p=794 问题：定位比较啰嗦（占据尺寸，需要具体定位），border不支持百分比（据说新的规范在考虑支持），尺寸变化有额外成本。优点：兼容性非常好，IE7+支持。border-color: transparent; IE7+支持，IE6需要使用dashed实现。background: transaprent; IE6+支持。 color: transparent; IE9+支持，原生IE8不支持。
+        3) transform: skewX()。最佳实现，兼顾尺寸控制，定位与兼容性，理解也非常好理解。兼容性IE9+都支持，-ms-。现在2019年了，对于transform属性，-webkit-,-moz-私有前缀没有必要再写了。
+      4. 前面的数值显示。使用计数器，前面的1-,2-,3-,...没有必要写在HTML中，以后调整（增减），HTML还需要同时维护。counter计数器优化我们的实现。https://www.zhangxinxu.com/wordpress/?p=4303 IE8+支持。
+      5. 语义，更接近 ol > li。还有一点nav的语义。
+     -->
+  </body>
+</html>

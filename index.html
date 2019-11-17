@@ -7,29 +7,32 @@
   <title>index</title>
   <base target='_blank'>
   <style>
-    textarea {
-      width: 400px;
-      height: 250px;
-      outline: 0;
-      resize: none;
+    .container {
+      overflow: hidden;
     }
-    div {
-      width: 200px;
-      height: 200px;
-      background: pink;
+    .div {
+      background-color: skyblue;
+      padding: 90px;
+      margin-bottom: -90px;
     }
-    div:hover {
-      transform: scale(1,2);
+    a {
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-   <div>
-
-   </div>
-   <textarea name="" id="" cols="30" rows="10">
-     请留言
-   </textarea>
+  <div class="container">
+    <div class="div">
+      hello
+    </div>
+  </div>
+  <p>hello</p>
+  <a href="">helloa</a>
+   <script>
+    //  let div = document.querySelector('div')
+    //  console.log(div.innerHTML);
+    //  console.log(div.innerText);
+   </script>
 
 </body>
 </html>
