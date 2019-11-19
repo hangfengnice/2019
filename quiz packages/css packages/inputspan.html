@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>INPUTspan</title>
+  <style>
+    .cs_tips {
+      color: gray;
+      margin-left: 15px;
+      position: absolute;
+      visibility: hidden;
+    }
+    :focus + .cs_tips {
+      visibility: visible;
+    }
+    .cs_direction {
+      direction: rtl;
+    }
+    .cs_direction .cs_input,
+    .cs_direction .cs_label {
+      direction: ltr;
+    }
+    .cs_label {
+      display: inline-block;
+    }
+    :focus ~ .cs_label {
+      color: darkblue;
+      text-shadow: 0 0 1px;
+    }
+  </style>
+</head>
+<body>
+  用户名： <input type="text"><span class="cs_tips">不超过10个字</span>
+
+
+  <div class="cs_direction"><input type="text" class="cs_input"><label for="" class="cs_label">用户名</label></div>
+</body>
+</html>

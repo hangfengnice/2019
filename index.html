@@ -18,7 +18,36 @@
     a {
       margin: 10px;
     }
+    #test {
+    color: red;
+  }
+  .test.test.test.test.test.test.test.test.test.test.test.test.test.test {
+    color: blue;
+  }
+  .\31 -foo {
+    color: skyblue;
+  }
+  .-helo {
+    color: skyblue;
+  }
+  .-- {
+    color: skyblue;
+  }
+
+  .blue {
+    color: blue;
+  }
+  .red {
+    color: red;
+  }
+  span[class]{
+     color: red;
+  }
+  [attr|=hello] {
+    color: green
+  }
   </style>
+
 </head>
 <body>
   <div class="container">
@@ -28,6 +57,14 @@
   </div>
   <p>hello</p>
   <a href="">helloa</a>
+
+  <div id="test" class="test">hello world</div>
+  <div class="1-foo">颜色是</div>
+  <div class="-helo">nihao</div>
+  <div class="--">great</div>
+  <div class="red">red</div>
+  <span class="greate">greate</span>
+  <div attr="hello world">good</div>
    <script>
     //  let div = document.querySelector('div')
     //  console.log(div.innerHTML);
