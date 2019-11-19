@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float问题</title>
+  <style>
+    .father {
+    border: 1px solid #444;
+    overflow: hidden;
+}
+.father > img {
+    width: 60px; height: 64px;
+    float: left;
+}
+.animal {
+    margin-left: 70px;
+}
+.clear {
+    clear: both;
+}
+  </style>
+</head>
+<body>
+  <div class="father">
+    <img src="../../images/beautiful.jpeg" alt="">
+      <div class="animal">小猫1， 小猫2.
+      <div class="clear"></div>
+      小猫2， 系哦啊毛4
+    </div>
+  </div>
+  
+</body>
+</html>
