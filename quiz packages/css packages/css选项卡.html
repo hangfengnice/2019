@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .div {
+      border-top: 30px double;
+      border-bottom: 10px solid ;
+      width: 20px;
+      height: 10px;
+    }
+  
+  </style>
+</head>
+<body>
+    <div id="map2" style="height: 400px;" class="wow fadeInUp"></div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=f0AB6ewzFdoHlfK7yQWavKcLMgjACNwv"></script>
+    
+    <script>
+      $(function () {
+        setTimeout(function () {
+          $('.header ul li').eq(7).addClass('active').siblings().removeClass('active')
+        })
+    //创建和初始化地图函数：
+        function initMap() {
+          createMap();//创建地图
+          setMapEvent();//设置地图事件
+          addMapControl();//向地图添加控件
+          addMapOverlay();//向地图添加覆盖物
+        }
+        function createMap() {
+          map = new BMap.Map("map2");
+          map.centerAndZoom(new BMap.Point(120.49107, 30.25116), 16);
+        }
+    
+        function setMapEvent() {
+          map.enableKeyboard();
+          map.enableDragging();
+          map.enableDoubleClickZoom()
+        }
+        function addMapOverlay() {
+          var markers = [{ content: "地址：浙江省杭州萧山区萧山靖江工业区", title: "杭州福恩纺织有限公司", position: { lat: 30.25116, lng: 120.49107 } }];
+          for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+            var marker = new BMap.Marker(point, {
+              icon: new BMap.Icon("images/marker.png", new BMap.Size(103, 89), {
+                imageOffset: new BMap.Size(0, 0)
+              })
+            });
+            var label = new BMap.Label('<div class="inner"><h4>'+markers[index].title+'</h4></div>', { offset: new BMap.Size(25, 5) });
+            var opts = {
+              width: 200,
+              title: markers[index].title,
+              enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            map.addOverlay(marker);
+          };
+        }
+        //向地图添加控件
+        function addMapControl() {
+          var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+          scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+          map.addControl(scaleControl);
+          var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_RIGHT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+          map.addControl(navControl);
+          var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: false });
+          map.addControl(overviewControl);
+        }
+        var map;
+        initMap();
+    
+      })
+    </script>
+</body>
+</html>

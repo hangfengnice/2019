@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .nav {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 600px;
+    margin: 1em auto; 
+    background-color: #333;
+    text-align: center;
+}
+.nav-list { 
+    display: table-cell;
+    font-weight: 400;
+}
+.nav-a { 
+    display: block; 
+    line-height: 20px; 
+    padding: 20px; 
+    color: #bbb; 
+    text-decoration: none; 
+}
+.nav-a:hover { 
+    color: #fff; 
+}
+
+.icon-hot { 
+    position: absolute; 
+    width: 28px; height: 11px; 
+    margin: -6px 0 0 2px; 
+    background: url(../../images/hot.gif);
+}
+.icon-new { 
+    position: absolute; 
+    width: 12px; height: 13px; 
+    margin: -6px 0 0 2px; 
+    background: url(../../images/new.png) no-repeat center;
+}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <h4 class="nav-list">
+        <a href class="nav-a">普通导航</a>
+    </h4>
+    <h4 class="nav-list">
+        <a href class="nav-a">
+            热门导航<i class="icon-hot"></i>
+        </a>
+    </h4>
+    <h4 class="nav-list">
+        <a href class="nav-a">
+            新导航<i class="icon-new"></i>
+        </a>
+    </h4>
+</div>
+</body>
+</html>
