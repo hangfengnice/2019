@@ -1,9 +1,5 @@
 @charset "UTF-8";
 /*reset.css*/
-/* html,body {
-  width: 100%;
-  height: 100%;
-} */
 body {
   font-family: "Microsoft Yahei";
   font-size: 14px;
@@ -73,6 +69,10 @@ a {
   margin: 0 auto;
   padding: 0 0 13.4%;
 }
+.box-inner-bottom {
+  width: 1151px;
+  margin: 0 auto;
+}
 .box-1536 {
   width: 1536px;
   margin: 0 auto;
@@ -91,9 +91,9 @@ a {
   z-index: 2;
   left: 0;
   right: 0;
-}
-.nav.active {
-  background: #020202;
+  background: rgba(0, 0, 0, .8);
+  padding-top: 0;
+  transition: all .25s;
 }
 .phone, .nav-phone {
   display: none;
@@ -104,9 +104,12 @@ a {
 }
 .nav-right {
   padding: 6px 0 0;
-} 
+}
+.nav.active {
+  padding-top: 30px;
+  transition: all .25s;
+}
 .flexbox {
-  padding: 30px 0 0;
   display: flex;
   justify-content: space-between;
   transition: all .25s;
@@ -174,9 +177,11 @@ a {
 }
 .swiper-h3-span.active {
   position: relative;
+  z-index:2;
 }
-.swiper-h3-span.active::after {
+.swiper-h3-span.active::before {
   content: "China Academy of Art";
+  font-family: Regular;
   position: absolute;
   font-size: 30px;
   color: #7b494b;
@@ -185,6 +190,7 @@ a {
   bottom: -50%;
   left: 50%;
   transition: all .25s;
+  z-index:-1;
 }
 .swiper-article.active {
   margin: 8% 0 0;
@@ -223,9 +229,42 @@ a {
   transform: translate(-100%, -50%);
   background: url(../images/right.png) center no-repeat;
 }
+/* pagination */
+.swiper-pagination-index.swiper-pagination-bullets.swiper-pagination-bullets {
+  position: absolute;
+  bottom: 4%;
+  z-index: 2;
+}
+.swiper-pagination-index .swiper-pagination-bullet {
+  height: 2px;
+  width: 100px;
+  background: #818180;
+}
+.swiper-pagination-index .swiper-pagination-bullet-active {
+  height: 2px;
+  width: 100px;
+  /* background-color: #a51f24; */
+  position: relative;
+}
+.swiper-pagination-index .swiper-pagination-bullet-active::before {
+  content:'';
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background: #a51f24;
+  animation: bannerstep 3s forwards linear;
+}
+@keyframes bannerstep {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 /* ind-contact */
 .ind-contact {
-  padding: 4.4% 0 10%;
+  padding: 3.4% 0 8%;
   background: #f4f4f4;
   text-align: center;
   position: relative;
@@ -282,43 +321,66 @@ a {
 }
 .indc-icon-wraps {
   display: flex;
+  justify-content: space-between;
 }
-.indc-icon-wrap-top {
-  display: flex;
-  width: 43%;
-  justify-content: space-around;
-
+.indc-icon-pic {
+  width: 100%;
 }
-.indc-icon-wrap-bottom {
-  display: flex;
-  width: 57%;
-  justify-content: space-around;
+.indc-icon-single:first-child {
+  padding-left: 0;
+  border: none;
+}
+.indc-icon-single:last-child {
+  padding-right: 0;
 }
 .indc-icon-single {
   display: flex;
   flex-direction: column;
   text-align: center;
-}
+  border-left: 2px solid rgb(241, 236, 236);
+  padding: 0 3%;
+} 
 .cases-hover-show {
   display: none;
   transition: all .25s;
 }
-.ind-brand-single:hover .ind-brand-pic {
-  opacity: 0;
-  /* display: none; */
+.ind-brand-pic-hover {
+  display: none;
+  position: relative;
 }
-/* .ind-brand-single:hover .cases-hover-show{
-  display: inline-block;
+.ind-brand-hover-bg {
   width: 100%;
-} */
-.caseimg1, .caseimg2 {
-  width: 100%;
-  overflow: hidden;
-  background: url(../images/images/photo_10.jpg) center no-repeat;
+  vertical-align: bottom;
 }
-
-.indc-icon-pic {
-  width: 100%;
+.ind-brand-hover-wrap {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.ind-brand-hover-title {
+  font-size: 36px;
+  margin: 22% 0 10%;
+  transition: all 0.25s;
+}
+.ind-brand-hover-desc {
+  width: 46%;
+  margin: 2% auto 0;
+  border-top: 2px solid #909090;
+  border-bottom: 2px solid #909090;
+  padding: 2% 0 3%;
+  transition: all 0.25s;
+}
+.ind-brand-desc-title {
+  font-size: 30px;
+  margin-bottom: 2%;
+  transition: all 0.25s;
+}
+.ind-brand-desc-bottom {
+  font-size: 18px;
+  transition: all 0.25s;
 }
 .indc-para {
   width: 4em;
@@ -375,7 +437,7 @@ a {
   transition: all .25s;
 }
 .ind-brand-desc {
-  padding: 7.5% 0 7.5% 12.5%;
+  padding: 5% 0 5% 12.5%;
   border: 1px solid #e6e6e6;
   margin: 0 0 3%;
   position: relative;
@@ -489,19 +551,19 @@ a {
   transition: all .25;
 }
 
-.ind-pro, .ind-design-single:first-child:hover .ind-design-li {
+.yellow, .yellow:hover .ind-design-li {
   color: #daccb1;
 }
-.ind-des, .ind-design-single:nth-child(2):hover .ind-design-li {
+.red, .red:hover .ind-design-li {
   color: #965456;
 }
-.ind-nor {
+.lightwhite {
   color: #cbcbcb;
 }
-.ind-vid, .border-wrap-top:hover .ind-design-li {
+.brown, .brown:hover .ind-design-li {
   color: #9f807e;
 }
-.ind-vi, .border-wrap-bottom:hover .ind-design-li {
+.purple, .purple:hover .ind-design-li {
   color: #716979;
 }
 .ind-design-li {
@@ -547,6 +609,7 @@ a {
   font-size: 18px;
   font-weight: bold;
   transition: all .25s;
+  
 }
 .ind-new-nav-span {
   color: #9f9f9f;
@@ -563,13 +626,22 @@ a {
 }
 .ind-news-tips {
   margin: 4.6% 0 2.4%;
-  padding: 3% 0 0;
   background: #f8f8f8;
   display: flex;
   transition: all .25s;
 }
 .ind-news-tip {
+  padding: 3% 0 0;
   width: 100%;
+  transition: all 0.25s;
+}
+.ind-news-tip:hover .ind-news-h3,
+.ind-news-tip:hover .ind-news-time,
+.ind-news-tip:hover .ind-news-desc {
+  color: #fff;
+}
+.ind-news-tip:hover {
+  background-color: #b31d22;
 }
 .ind-news-h3 {
   color: #101010;
@@ -585,8 +657,9 @@ a {
   transition: all .25s;
 }
 .ind-news-desc {
-  color: #c8c8c8;
+  color: #919191;
   font-size: 18px;
+  line-height: 24px;
   padding: 10% 0 12% 3.5%;
   width: 22em;
   transition: all .25s;
@@ -643,6 +716,7 @@ a {
   transition: all .25s;
 }
 .footer-phone-num {
+  font-family: CommScriptTT;
   font-size: 48px;
   white-space: nowrap;
   padding: 6% 0;
@@ -693,10 +767,6 @@ a {
 .footer-arrow {
   transform: rotate(-90deg);
 }
-.other-banner {
-  margin: 88px 0 0;
-}
-
 /* case页面 */
 .other-banner-pic {
   width: 100%;
@@ -709,4 +779,28 @@ a {
   font-size: 18px;
   color: #919191;
   text-align: center;
+}
+#indexgs {
+	margin: 0 auto;
+	top: 100px;
+	width: 1128px;
+	height: 508px;
+	position: relative;
+}
+#indexgs img {
+	position: absolute;
+}
+#indexg2 {
+	left: 1000px;
+	top: 1000px;
+}
+#indexg1 {
+	left: -1000px;
+	top: 1000px;
+	position: absolute
+}
+#indexg0 {
+	left: 0;
+	top: 1000px;
+	position: absolute;
 }

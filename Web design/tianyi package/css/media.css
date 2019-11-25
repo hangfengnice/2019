@@ -13,8 +13,9 @@
     width: 80%;
     padding: 2% 0 1.2%;
   }
-  .flexbox {
-    padding: 0;
+  .nav.active {
+    padding-top: 0;
+    transition: all .25s;
   }
   .nav-span {
     font-size: 16px;
@@ -46,9 +47,13 @@
     width: 80%;
     margin: 0 auto;
   }
+  .box-inner-bottom {
+    width: 84%;
+    margin: 0 auto;
+  }
   /* <!-- 服务理念 --> */
   .ind-contact {
-    padding: 3.8% 0 8%;
+    padding: 2% 0 6%;
     background: #f4f4f4;
     text-align: center;
     position: relative;
@@ -74,10 +79,19 @@
   .ind-case-nav {
     margin: 0 0 3%;
   }
+  .ind-brand-hover-title {
+    font-size: 26px;
+    margin: 16% 0 6%;
+  }
+  .ind-brand-desc-title {
+    font-size: 18px;
+  }
+  .ind-brand-desc-bottom {
+    font-size: 14px;
+  }
   .ind-brand-desc {
-    padding: 6.8% 0 6.8% 11.4%;
+    padding: 4% 0 4% 11.4%;
     margin: 0 0 2.6%;
-    
   }
   .ind-brand-h6 {
     font-size: 20px;
@@ -155,6 +169,8 @@
   }
   .ind-news-tips {
     margin: 4% 0 2%;
+  }
+  .ind-news-tip {
     padding: 2.4% 0 0;
   }
   .ind-news-h3 {
@@ -212,7 +228,9 @@
 @media (max-width: 980px)  {
   .box-inner {
     width: 70%;
-    margin: 0 auto;
+  }
+  .box-inner-bottom {
+    width: 72%;
   }
   .nav-span {
     font-size: 16px;
@@ -236,6 +254,9 @@
   .footer-phone-num {
     font-size: 32px;
     padding: 4% 0;
+  }
+  .indc-icon-single {
+    padding: 0 2%;
   }
 }
 @media (max-width: 865px)  {
