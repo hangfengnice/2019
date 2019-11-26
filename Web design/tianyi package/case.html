@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <nav class="nav pc">
+    <nav class="nav active pc">
         <div class="box flexbox">
           <div class="nav-left">
             <div class="nav-img-left"><img src="./images/logo.png" alt=""></div>
@@ -36,7 +36,7 @@
       </nav>
   
     <!-- phone nav -->
-    <div class="nav-phone phone">
+    <div class="nav-phone active phone">
       <div class="box phone-flex">
         <span class="phone-nav-span">新零售 新视觉 新概念!</span>
         <img class="phone-nav-img" src="./images/hb.png" alt="">
@@ -356,5 +356,28 @@
   <script src="./js/jquery.min.js"></script>
   <script src="js/jquery.mousewheel.js"></script>
   <script src="js/animate.js"></script>
+  <script>
+     $(document).ready(function () {
+      $('.indexgs').css('padding-top', $('.nav').height())
+      $('.other-banner').css('padding-top', $('.nav').height())
+
+      $(window).scroll(function () { 
+        if ($('.nav').offset().top > $('.nav').height()) {
+          $('.nav').removeClass('active')
+        } else if ($(window).width() > 1280) {
+          $('.nav').addClass('active')
+        }
+
+        if ($('.nav-phone ').offset().top > $('.nav-phone').height()) {
+          $('.nav-phone ').removeClass('active')
+        } else {
+          $('.nav-phone ').addClass('active')
+        }
+
+        $('.indexgs').css('padding-top', $('.nav').height())
+      $('.other-banner').css('padding-top', $('.nav').height())
+      })
+    })
+  </script>
 </body>
 </html>

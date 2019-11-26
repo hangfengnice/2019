@@ -52,8 +52,8 @@
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.92rem;
-    width: 66.88%;
     color: #fff;
+    white-space: nowrap;
   }
   .phone-banner-h3-span {
     font-weight: normal;
@@ -275,6 +275,7 @@
     padding: 0;
   }
   .ind-news-desc {
+    line-height: 0.8rem;
     font-size: 0.4736rem;
     padding: 0.68rem 0 0.76rem;
   }
