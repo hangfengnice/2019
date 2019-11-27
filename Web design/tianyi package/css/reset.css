@@ -5,7 +5,10 @@ body {
   font-size: 14px;
   line-height: 1.42858;
 }
-
+@font-face {
+  font-family: CommScriptTT;
+  src: url(../fonts/COMSC.TTF);
+}
 h1,
 h2,
 h3,
@@ -85,6 +88,10 @@ a {
   padding: 2.4% 0 1.5%;
   transition: all .25s;
 }
+.about-box {
+  width: 1028px;
+  margin: 0 auto;
+}
 .nav, .nav-phone {
   position: fixed;
   top: 0;
@@ -141,65 +148,13 @@ a {
   line-height: 52px;
 }
 .swiper-slide {
-  width: 100%;
   color: #fff;
 }
-.swiper-banner1 {
-  background: url(../images/index-banner.jpg) center no-repeat;
+.index-post-wrap {
+  display: block;
 }
-.swiper-p {
-  margin: 22% 0 0;
-}
-.swiper-span {
-  font-size: 14px;
-  position: relative;
-}
-.swiper-span::after {
-  content: '';
-  position: absolute;
-  width: 70px;
-  height: 1px;
-  left: 100%;
-  transform: translate(16px);
-  bottom: 50%;
-  background: #828282;
-}
-.swiper-h3 {
-  margin: 7% 0 0;
-  font-size: 60px;
-  font-weight: bold;
-  width: 9em;
-  line-height: 100px;
-  transition: all .25s;
-}
-.swiper-h3-span {
-  font-weight: 100;
-}
-.swiper-h3-span.active {
-  position: relative;
-  z-index:2;
-}
-.swiper-h3-span.active::before {
-  content: "China Academy of Art";
-  font-family: Regular;
-  position: absolute;
-  font-size: 30px;
-  color: #7b494b;
-  white-space: nowrap;
-  font-weight: bold;
-  bottom: -50%;
-  left: 50%;
-  transition: all .25s;
-  z-index:-1;
-}
-.swiper-article.active {
-  margin: 8% 0 0;
-}
-.swiper-article {
-  font-size: 18px;
-  letter-spacing: 20px;
-  text-indent: 10px;
-  opacity: 0.8;
+.index-post-single {
+  width: 100%;
 }
 .swiper-button {
   position: absolute;
@@ -820,13 +775,19 @@ a {
   width: 100%;
 }
 .case-cases {
-  padding: 5.2% 0 3%;
+  padding: 11.2% 0 3%;
 }
 .case-title {
-  margin: 0 0 5.2%;
+  margin: 0 0 3.2%;
   font-size: 18px;
   color: #919191;
   text-align: center;
+}
+.case-location {
+  color: #545454;
+  font-size: 16px;
+  text-align: right;
+  margin-bottom: 1%;
 }
 #indexgs {
 	margin: 0 auto;
@@ -851,4 +812,285 @@ a {
 	left: 0;
 	top: 1000px;
 	position: absolute;
+}
+
+/* about 关于我们 */
+
+.about-banner-img {
+  width: 100%;
+}
+/* team */
+.about-team {
+  padding: 8% 0 8%;
+}
+.about-teams {
+  display: flex;
+}
+.about-team-single + div {
+  margin-left: 6%;
+}
+.about-team-title {
+  display: inline-block;
+  margin-left: 10px;
+  color: #d81617;
+  font-weight: bolder;
+  position: relative;
+}
+.about-team-title::before {
+  content: '';
+  width: 20%;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  background: #ff0211;
+  height: 4px;
+
+}
+.about-team-title::after {
+  content: '';
+  width: 78%;
+  position: absolute;
+  bottom: -6px;
+  left: 22%;
+  background: #000;
+  height: 2px;
+}
+.about-team-desc {
+  padding: 6% 0 10%;
+  font-size: 11px;
+  line-height: 24px;
+}
+.about-team-img {
+  width: 100%;
+}
+/* about-profession */
+.about-profession {
+  padding: 0 0 8%;
+  background: #8c8c8c;
+  text-align: center;
+  color: #fff;
+}
+.about-profession-img {
+  width: 100%;
+  border: none;
+}
+.about-profession-title {
+  margin: 4% 2%;
+  font-size: 25px;
+}
+.about-profession-desc {
+  font-size: 12px;
+  line-height: 28px;
+  color: #d4d4d4;
+}
+
+.about-vedio-wrap {
+  position: relative;
+  top: -70px;
+  margin: 0 20px;
+}
+
+/* about-quality */
+.about-quality {
+  padding: 8% 0 12%;
+  background: #f5f5f5;
+}
+.about-quality-h3 {
+  color: #d81617;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  margin: 0 0 30px;
+}
+.about-quality-h3::before {
+  content: 'TIANYI OCCUPATION ACCOMPLISHMNT';
+  position: absolute;
+  transform: scale(0.5);
+  font-size: 6px;
+  margin-left: -8%;
+  top: -20px;
+  left: 0;
+  color: #d81617;
+  letter-spacing: 3px;
+}
+.about-quality-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.about-quality-li {
+  line-height: 22px;
+  font-size: 12px;
+}
+.about-quality-right-one {
+  line-height: 22px;
+}
+.about-quality-right-two {
+  position: relative;
+  line-height: 22px;
+  display: inline-block;
+}
+.about-quality-right-two::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  height: 1px;
+  width: 24px;
+  background: #000;
+}
+.about-quality-right-three {
+  margin: 50px 0 25px;
+}
+.about-quality-right-button {
+  display: inline-block;
+  padding: 17px 10px;
+  background: #0270cf;
+  color: #fff;
+}
+
+/* dynamic 活动 */
+.dynamic-banner {
+  position: relative;
+}
+.dynamic-banner-img {
+  width: 100%;
+  vertical-align: bottom;
+}
+.dynamic-banner-wrap {
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(-48%);
+  top: 40%;
+  text-align: center;
+  color: #abacac;
+}
+.dynamic-title {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10%;
+}
+.dynamic-desc {
+  font-size: 12px;
+  line-height: 22px;
+}
+.dynamic-update {
+  padding: 7.3% 0;
+}
+.dynamic-box {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.dynamic-update-title {
+  position: relative;
+  font-size: 13px;
+}
+.dynamic-update-title:before {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background: #1a7dd1;
+  top: -40px;
+}
+.dynamic-update-title:after {
+  content: 'Real-time update';
+  position: absolute;
+  color: #727272;
+  font-size: 12px;
+  bottom: -1.5em;
+  left: 0;
+  white-space: nowrap;
+}
+.dynamic-update-desc {
+  font-size: 12px;
+  line-height: 22px;
+  text-align: justify;
+}
+.dynamic-update-imgwrap {
+  margin-top: 130px;
+}
+.dynamic-update-en {
+  margin: 35px 0 54px;
+  letter-spacing: 70px;
+}
+
+.dynamic-create {
+  border-top: 1px solid transparent;
+
+  background: url(../images/dynamic04.jpg) center bottom no-repeat;
+  padding: 0 0 126px;
+}
+.dynamic-create-title::before {
+  content: "ORIGINALBYTIANYI";
+  position: absolute;
+  top: -1.5em;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  left: 50%;
+  transform: translate(-50%);
+}
+.dynamic-create-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 135px 0 120px;
+  text-align: center;
+  position: relative;
+}
+.dynimac-create-outer-box {
+  width: 1538px;
+  margin: 0 auto;
+  position: relative;
+}
+.dynamic-create-box {
+  width: 1361px;
+  margin: 0 auto;
+}
+.dynamic-swiper-content {
+  background: #1a1a1a;
+  padding: 47px 50px 30px 35px 
+}
+.dynamic-create-single-title {
+  color: #d81a1e;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.dynamic-create-single-time {
+  color: #595959;
+  margin: 24px 0 20px;
+}
+.dynamic-create-single-desc {
+  color: #f1eded;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+.dynamic-create-sigle-img {
+  width: 100%;
+}
+.dynamic-more {
+  color: #8d8d8d;
+}
+.swiper-dynamic-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  cursor: pointer;
+}
+.swiper-dynamic-next {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  outline: none;
+  cursor: pointer;
+  transform: translate(-100%, -50%);
+}
+/* contact */
+.contact-banner-img {
+  width: 100%;
+  vertical-align: bottom;
 }

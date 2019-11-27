@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/swiper.css">
 </head>
 <body>
     <nav class="nav active pc">
@@ -23,12 +22,12 @@
                 <a href="index.html" class="nav-li-a">HOME 首页</a>
               </li>
               <li class="nav-li">
-                <a href="case.html" class="nav-li-a">CASE 案例</a>
+                <a href="index.html#case" class="nav-li-a">CASE 案例</a>
               </li>
               <li class="nav-li">
                 <a href="about.html" class="nav-li-a">ABOUT 我们</a>
               </li>
-              <li class="nav-li"><a href="news.html" class="nav-li-a">NEWS 动态</a></li>
+              <li class="nav-li"><a href="dynamic.html" class="nav-li-a">NEWS 动态</a></li>
               <li class="nav-li"><a href="contact.html" class="nav-li-a">CONTACT 联系</a></li>
               <li class="nav-li "><img class="nav-img" src="./images/hb.png" alt=""></li>
             </ul>
@@ -53,6 +52,7 @@
     <div class="case-cases">
       <div class="box select">
         <h3 class="case-title">Brand planning 品牌单品设计</h3>
+        <div class="case-location">首页 > 案例 > 品牌单品设计</div>
         <div class="ind-brand-wrap">
           <div class="ind-brand-single">
             <img class="ind-brand-pic" src="./images/sd_01.jpg" alt="">
@@ -392,24 +392,30 @@
   
 
   <script src="./js/jquery.min.js"></script>
-  <script src="./js/swiper.min.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script src="js/animate.js"></script>
   <script>
     $(document).ready(function () {
-      var mySwiper = new Swiper ('.swiper-container', {
-      loop: true, // 循环模式选项
-      // 如果需要分页器
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      // 如果需要前进后退按钮
-      navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
-      },
-    })        
+      $('.indexgs').css('padding-top', $('.nav').height())
+      $('.other-banner').css('padding-top', $('.nav').height())
+
+      $(window).scroll(function () { 
+        if ($('.nav').offset().top > $('.nav').height()) {
+          $('.nav').removeClass('active')
+        } else if ($(window).width() > 1280) {
+          $('.nav').addClass('active')
+        }
+
+        if ($('.nav-phone ').offset().top > $('.nav-phone').height()) {
+          $('.nav-phone ').removeClass('active')
+        } else {
+          $('.nav-phone ').addClass('active')
+        }
+
+        $('.indexgs').css('padding-top', $('.nav').height())
+      $('.other-banner').css('padding-top', $('.nav').height())
+      })
     })
-   
-  
   </script>
 </body>
 </html>

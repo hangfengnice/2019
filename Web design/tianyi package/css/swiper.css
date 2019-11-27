@@ -22,7 +22,8 @@
 }
 .swiper-container,
 .swiper-container-phone,
-.swiper-container-phone-news {
+.swiper-container-phone-news,
+.swiper-container-dynamic {
   margin-left: auto;
   margin-right: auto;
   position: relative;
