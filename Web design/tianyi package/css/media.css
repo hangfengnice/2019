@@ -6,7 +6,26 @@
   .box-1536 {
     width: 96%;
   }
-  
+
+  /* dynimac  */
+  .dynamic-create {
+    padding: 0 0 100px;
+  }
+  .dynamic-create-title {
+    margin: 100px 0 80px;
+  }
+  .dynimac-create-outer-box {
+    width: 90%;
+  }
+  .dynamic-create-box {
+    width: 88%;
+  }
+  .dynamic-swiper-content {
+    background: #1a1a1a;
+    padding: 16px 10px 10px 10px;
+    height: 224px;
+    box-sizing: border-box;
+  }
 }
 @media (max-width: 1280px) {
   .box-1150 {
@@ -61,6 +80,7 @@
   .indc-h3 {
     margin: 1.8% 0 5%;
   }
+  
   .indc-icon-pic {
     width: 80%;
     margin: 0 auto;
@@ -222,8 +242,78 @@
     line-height: 36px;
     white-space: nowrap;
   }
+
+  /* 我们的页面 about */
+  
+    /* team */
+    .about-team {
+      padding: 6% 0 6%;
+    }
+    .about-box {
+      width: 80%;
+    }
+    .about-team-line {
+      margin-left: 74%;
+    }
+
+    /* about-profession */
+    .about-profession {
+      padding: 0 0 10%;
+    }
+    .about-profession-title {
+      margin: 2% 0 2%;
+    }
+    /* about-quality */
+    .about-quality {
+      padding: 6% 0 10%;
+    }
+    .about-quality-h3 {
+      margin: 0 0 20px;
+    }
+    .about-quality-h3::before {
+      margin-left: -80px;
+    }
+    .about-quality-left {
+      margin: 0 10% 0 0;
+    }
+
+/* dynamic */
+    .dynamic-box {
+    width: 80%;
+    }
+    .dynamic-update-span + span {
+      margin-left: 10%;
+    }
+    .dynamic-update-right {
+      width: 67%;
+    }
+    .dynamic-update-title:before {
+      top: -30px;
+    }
+    .dynamic-create {
+      padding: 0 0 80px;
+    }
+    .dynamic-create-single-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .dynamic-swiper-content {
+      height: auto;
+    }
+    .dynamic-create-single-time {
+      margin: 14px 0 10px;
+    }
+    .overflow-el {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+    }
+    
 }
-@media (max-width: 980px)  {
+@media (max-width: 1020px)  {
   .box-inner {
     width: 70%;
   }
@@ -256,6 +346,13 @@
   .indc-icon-single {
     padding: 0 2%;
   }
+  .ind-cases-li-a {
+    padding: 16px 23px;
+  }
+  /*  dynamic */
+  .dynamic-update-span + span {
+    margin-left: 9.5%;
+  }
 }
 @media (max-width: 865px)  {
   .nav-span {
@@ -265,12 +362,20 @@
     padding: 6px 2px;
   }
   .ind-cases-li-a {
-    padding: 16px 24px;
+    padding: 16px 12px;
   } 
   .ind-news-h3 {
     width: 11em;
   }
   .footer-li {
     font-size: 17px;
+  }
+  .about-team-line {
+    margin-left: 73%;
+  }
+  /*  dynamic */
+
+  .dynamic-update-span + span {
+    margin-left: 9.1%;
   }
 }

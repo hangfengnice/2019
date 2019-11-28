@@ -97,6 +97,15 @@
     margin: 0.4rem 0 1.9rem;
     font-size: 0.56rem;
   }
+  .indc-h3-server {
+    margin-right: 1.24rem;
+  }
+  .indc-h3-server::after {
+    width: 0.9rem;
+    height: 2px;
+    top: 50%;
+    right: -1.08rem;
+  }
   .indc-icon-wrap-top {
     padding: 0 0 1.2rem;
     display: flex;
@@ -291,11 +300,12 @@
   .ind-profile-img {
     width: 100%;
   }
+  .swiper-container-create-phone,
   .swiper-container-phone-news,
   .swiper-container-phone {
     padding: 0 0 2.4rem;
   }
-  .swiper-pagination-phone.swiper-pagination-bullets,
+  .swiper-pagination-create-phone.swiper-pagination-bullets .swiper-pagination-phone.swiper-pagination-bullets,
   .swiper-pagination-phone-news.swiper-pagination-bullets {
     text-align: center;
     position: absolute;
@@ -374,6 +384,167 @@
   /* case.html */
   .case-cases {
     padding-bottom: 0;
+  }
+  .about-team {
+    background: #f3f3f3;
+    padding: 0.6rem 0 2.8rem;
+  }
+  .about-box {
+    width: 86.666666%;
+  }
+  .about-teams {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .about-team-single + div {
+    margin: 1.16rem 0 0;
+  }
+  .about-team-title {
+    font-size: 0.64rem;
+  }
+  .about-team-title::before {
+    width: 0.46rem;
+    bottom: -0.32rem;
+    left: 0.48rem;
+    height: 3px;
+  }
+  .about-team-title::after {
+    width: 1rem;
+    bottom: -0.32rem;
+    left: 0.98rem;
+  }
+  .about-team-desc {
+    margin: 0.84rem 0 0.8rem;
+    font-size: 0.44rem;
+    line-height: 0.8rem;
+    color: #393939;
+  }
+  .about-team-desc.active {
+    padding-top: 0;
+  }
+  .about-team-img {
+    width: 100%;
+  }
+  .about-profession {
+    padding: 0 0 3.24rem;
+  }
+  .about-profession-title {
+    margin: 0.6rem 0;
+    font-size: 0.64rem;
+  }
+  .about-profession-desc {
+    font-size: 0.42rem;
+    line-height: 0.72rem;
+  }
+  .about-vedio {
+    position: relative;
+    height: 5.2rem;
+  }
+  .about-vedio-wrap,
+  .about-vedio-play {
+    margin-top: -2.4rem;
+  }
+  .dynamic-banner {
+    padding: 1.6rem 0 0;
+    background: #111;
+  }
+  .dynamic-banner-wrap {
+    top: 5.32rem;
+    margin-left: 48%;
+  }
+  .dynamic-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .dynamic-desc {
+    font-size: 0.2934rem;
+    line-height: 0.52rem;
+  }
+  .dynamic-update {
+    padding: 0.8rem 0 1.6rem;
+    text-align: center;
+  }
+  .dynamic-box {
+    width: 86.6666%;
+    display: block;
+  }
+  .dynamic-update-phone-title {
+    position: relative;
+    font-size: 0.64rem;
+    color: #c72424;
+    margin-bottom: 0.8rem;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .dynamic-update-phone-title:before {
+    content: '';
+    position: absolute;
+    width: 0.46rem;
+    height: 3px;
+    background: #1a7dd1;
+    bottom: -0.32rem;
+    left: 0.48rem;
+  }
+  .dynamic-update-phone-title:after {
+    content: '';
+    position: absolute;
+    width: 0.98rem;
+    height: 2px;
+    background: #111;
+    bottom: -0.32rem;
+    left: 0.98rem;
+  }
+  .dynamic-update-desc {
+    font-size: 0.42rem;
+    line-height: 0.84rem;
+    text-align: center;
+    margin-top: 0.8rem;
+    color: #404040;
+    padding: 0;
+  }
+  .dynamic-create-phone {
+    padding: 1.52rem 0 0;
+    vertical-align: bottom;
+    background: url(../images/dynamic04-phone.jpg) center no-repeat;
+  }
+  .dynamic-create-title-phone::before {
+    content: "ORIGINALBYTIANYI";
+    position: absolute;
+    top: -0.32rem;
+    color: #fff;
+    font-size: 0.28rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .dynamic-create-title-phone {
+    color: #fff;
+    font-size: 0.64rem;
+    margin: 0 0 1.8rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.25s;
+  }
+  .dynimac-swiper-box {
+    padding: 1.2rem 0 0 0.4rem;
+    background: #111;
+  }
+  .dynimac-news-h3 {
+    font-size: 0.64rem;
+    color: #d81a1e;
+  }
+  .dynimac-news-time {
+    font-size: 0.4736rem;
+    color: #595959;
+    margin: 0.64rem 0 0.6rem;
+  }
+  .dynimac-news-desc {
+    font-size: 0.52rem;
+    color: #d4d4d4;
+    line-height: 0.76rem;
+    padding: 0 0 1.52rem;
+    width: 17em;
   }
 }
 @media screen and (max-width: 720px) {

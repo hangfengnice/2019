@@ -102,6 +102,15 @@
     margin: 20rem / @bs 0 95rem / @bs;
     font-size: 28rem / @bs;
   }
+  .indc-h3-server {
+    margin-right: 62rem / @bs;
+  }
+  .indc-h3-server::after {
+    width: 45rem / @bs;
+    height: 2px;
+    top: 50%;
+    right: -54rem / @bs;
+  }
   .indc-icon-wrap-top {
     padding: 0 0 60rem / @bs;
     display: flex;
@@ -301,10 +310,12 @@
   .ind-profile-img {
     width: 100%;
   }
+  .swiper-container-create-phone,
   .swiper-container-phone-news,
   .swiper-container-phone {
     padding: 0 0 120rem / @bs;
   }
+  .swiper-pagination-create-phone.swiper-pagination-bullets
   .swiper-pagination-phone.swiper-pagination-bullets,
   .swiper-pagination-phone-news.swiper-pagination-bullets {
     text-align: center;
@@ -389,7 +400,178 @@
     padding-bottom: 0;
 
   }
-  
+
+  // about.html
+  .about-team {
+    background: #f3f3f3;
+    padding: 30rem / @bs 0 140rem / @bs;
+  }
+  .about-box {
+    width: 86.666666%;
+  }
+  .about-teams {
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .about-team-single + div {
+    margin: 58rem / @bs 0 0;
+  }
+  .about-team-title {
+    font-size: 32rem / @bs;
+  }
+  .about-team-title::before {
+    width: 23rem / @bs;
+    bottom: -16rem / @bs;
+    left: 24rem / @bs;
+    height: 3px;
+  }
+  .about-team-title::after {
+    width: 50rem / @bs;
+    bottom: -16rem / @bs;
+    left: 49rem / @bs;
+  }
+  .about-team-desc {
+    margin: 42rem / @bs 0 40rem / @bs;
+    font-size: 22rem / @bs;
+    line-height: 40rem / @bs;
+    color: #393939;
+  }
+  .about-team-desc.active {
+    padding-top: 0;
+  }
+  .about-team-img {
+    width: 100%;
+  }
+  // profession
+  .about-profession {
+    padding: 0 0 162rem / @bs;
+  }
+  .about-profession-title {
+    margin: 30rem / @bs 0;
+    font-size: 32rem / @bs;
+  }
+  .about-profession-desc {
+    font-size: 21rem / @bs;
+    line-height: 36rem / @bs;
+  }
+  .about-vedio {
+    position: relative;
+    height: 260rem / @bs;
+  }
+  .about-vedio-wrap,
+  .about-vedio-play {
+    margin-top: -120rem / @bs;
+  }
+
+  // dynimac 
+  .dynamic-banner {
+    padding: 80rem / @bs 0 0;
+    background: #111;
+  }
+  .dynamic-banner-wrap {
+    top: 266rem / @bs;
+    margin-left: 48%;
+  }
+  .dynamic-title {
+    font-size: 40rem / @bs;
+    margin-bottom: 40rem / @bs;
+  }
+  .dynamic-desc {
+    font-size: 14.67rem / @bs;
+    line-height: 26rem / @bs;
+  }
+  .dynamic-update {
+    padding: 40rem / @bs 0 80rem / @bs;
+    text-align: center;
+  }
+  .dynamic-box {
+    width: 86.6666%;
+    display: block;
+  }
+  .dynamic-update-phone-title {
+    position: relative;
+    font-size: 32rem / @bs;
+    color: #c72424;
+    margin-bottom: 40rem / @bs;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .dynamic-update-phone-title:before {
+    content: '';
+    position: absolute;
+    width: 23rem / @bs;
+    height: 3px;
+    background: #1a7dd1;
+    bottom: -16rem / @bs;
+    left: 24rem / @bs;
+  }
+  .dynamic-update-phone-title:after {
+    content: '';
+    position: absolute;
+    width: 49rem / @bs;
+    height: 2px;
+    background: #111;
+    bottom: -16rem / @bs;
+    left: 49rem / @bs;
+  }
+  .dynamic-update-desc {
+    font-size: 21rem / @bs;
+    line-height: 42rem / @bs;
+    text-align: center;
+    margin-top: 40rem / @bs;
+    color: #404040;
+    padding: 0;
+  }
+  .dynamic-create-phone {
+    padding: 76rem / @bs 0 0;
+    vertical-align: bottom;
+    background: url(../images/dynamic04-phone.jpg) center no-repeat;
+  }
+  .dynamic-create-title-phone::before {
+    content: "ORIGINALBYTIANYI";
+    position: absolute;
+    top: -16rem / @bs;
+    color: #fff;
+    font-size: 14rem / @bs;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .dynamic-create-title-phone {
+    color: #fff;
+    font-size: 32rem / @bs;
+    margin: 0 0 90rem / @bs;
+    text-align: center;
+    position: relative;
+    transition: all .25s;
+  }
+  .dynimac-swiper-box {
+    padding: 60rem / @bs 0 0 20rem / @bs;
+    background: #111;
+  }
+  .dynimac-news-h3 {
+    font-size: 32rem / @bs;
+    color: #d81a1e;
+
+  }
+  .dynimac-news-time {
+    font-size: 23.68rem / @bs;
+    color: #595959;
+    margin: 32rem / @bs 0 30rem / @bs;
+  }
+  .dynimac-news-desc {
+    font-size: 26rem / @bs;
+    color: #d4d4d4;
+    line-height: 38rem / @bs;
+    padding: 0 0 76rem / @bs;
+    width: 17em;
+  }
+  .swiper-pagination-create-phone {
+
+  }
+
+
 }
 
 
@@ -398,6 +580,31 @@
     font-size: 720px / @no;
   }
 }
+// @media screen and (max-width: 695px) {
+//   html {
+//     font-size: 695px / @no;
+//   }
+// }
+// @media screen and (max-width: 670px) {
+//   html {
+//     font-size: 670px / @no;
+//   }
+// }
+// @media screen and (max-width: 650px) {
+//   html {
+//     font-size: 650px / @no;
+//   }
+// }
+// @media screen and (max-width: 630px) {
+//   html {
+//     font-size: 630px / @no;
+//   }
+// }
+// @media screen and (max-width: 610px) {
+//   html {
+//     font-size: 610px / @no;
+//   }
+// }
 @media screen and (max-width: 540px) {
   html {
     font-size: 540px / @no;

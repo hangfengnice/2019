@@ -155,6 +155,7 @@ a {
 }
 .index-post-single {
   width: 100%;
+  vertical-align: bottom;
 }
 .swiper-button {
   position: absolute;
@@ -196,7 +197,7 @@ a {
   background: #818180;
 }
 .swiper-pagination-index .swiper-pagination-bullet-active {
-  height: 2px;
+  height: 1px;
   width: 100px;
   /* background-color: #a51f24; */
   position: relative;
@@ -275,12 +276,29 @@ a {
   font-size: 24px;
   transition: all .25s;
 }
+.indc-h3-server {
+  position: relative;
+  margin-right: 50px;
+}
+.indc-h3-server::after {
+  content: '';
+  width: 38px;
+  height: 2px;
+  background: #111;
+  position: absolute;
+  top: 50%;
+  right: -45px;
+}
 .indc-icon-wraps {
   display: flex;
   justify-content: space-between;
 }
+.indc-icon-single:hover .indc-icon-pic {
+  transform: scale(1.08);
+}
 .indc-icon-pic {
   width: 100%;
+  transition: all .25s;
 }
 .indc-icon-single:first-child {
   padding-left: 0;
@@ -825,13 +843,13 @@ a {
 }
 .about-teams {
   display: flex;
+  margin-right: 6%;
 }
 .about-team-single + div {
   margin-left: 6%;
 }
 .about-team-title {
   display: inline-block;
-  margin-left: 10px;
   color: #d81617;
   font-weight: bolder;
   position: relative;
@@ -848,20 +866,32 @@ a {
 }
 .about-team-title::after {
   content: '';
-  width: 78%;
+  width: 76%;
   position: absolute;
   bottom: -6px;
-  left: 22%;
+  left: 24%;
   background: #000;
   height: 2px;
 }
 .about-team-desc {
-  padding: 6% 0 10%;
+  margin: 8% 0 18%;
   font-size: 11px;
   line-height: 24px;
 }
+.about-team-desc.active {
+  padding-top: 10px;
+}
 .about-team-img {
   width: 100%;
+}
+.about-team-line {
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background-color: #111;
+  margin-left: 960px;
+  margin-top: -3%;
+  transition: all .25s;
 }
 /* about-profession */
 .about-profession {
@@ -869,31 +899,41 @@ a {
   background: #8c8c8c;
   text-align: center;
   color: #fff;
+  transition: all .25s;
 }
 .about-profession-img {
   width: 100%;
   border: none;
 }
 .about-profession-title {
-  margin: 4% 2%;
+  margin: 4% 0 4%;
   font-size: 25px;
+  transition: all .25;
 }
 .about-profession-desc {
   font-size: 12px;
   line-height: 28px;
-  color: #d4d4d4;
+  color: #dfdddd;
 }
-
-.about-vedio-wrap {
+.about-box.active {
   position: relative;
-  top: -70px;
-  margin: 0 20px;
 }
-
+.about-vedio-play {
+  position: absolute;
+  margin: -70px 0 0;
+  z-index: 1;
+  width: 100%;
+}
+.about-vedio-wrap {
+  margin: -70px 0 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
 /* about-quality */
 .about-quality {
   padding: 8% 0 12%;
   background: #f5f5f5;
+  transition: all .25s;
 }
 .about-quality-h3 {
   color: #d81617;
@@ -901,6 +941,7 @@ a {
   font-weight: bold;
   position: relative;
   margin: 0 0 30px;
+  transition: all .25s;
 }
 .about-quality-h3::before {
   content: 'TIANYI OCCUPATION ACCOMPLISHMNT';
@@ -982,6 +1023,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.dynamic-update-right {
+  width: 67%;
+}
 .dynamic-update-title {
   position: relative;
   font-size: 13px;
@@ -1006,19 +1050,22 @@ a {
 .dynamic-update-desc {
   font-size: 12px;
   line-height: 22px;
-  text-align: justify;
+  text-align: justify; 
+  padding-right: 8%;
 }
 .dynamic-update-imgwrap {
   margin-top: 130px;
 }
 .dynamic-update-en {
   margin: 35px 0 54px;
-  letter-spacing: 70px;
 }
-
+.dynamic-update-span + span {
+  margin-left: 70px;
+  transition: all .25s;
+}
 .dynamic-create {
   border-top: 1px solid transparent;
-
+  transition: all .25s;
   background: url(../images/dynamic04.jpg) center bottom no-repeat;
   padding: 0 0 126px;
 }
@@ -1039,6 +1086,7 @@ a {
   margin: 135px 0 120px;
   text-align: center;
   position: relative;
+  transition: all .25s;
 }
 .dynimac-create-outer-box {
   width: 1538px;
@@ -1051,7 +1099,8 @@ a {
 }
 .dynamic-swiper-content {
   background: #1a1a1a;
-  padding: 47px 50px 30px 35px 
+  padding: 47px 50px 30px 35px;
+  transition: all .25s;
 }
 .dynamic-create-single-title {
   color: #d81a1e;
@@ -1094,3 +1143,175 @@ a {
   width: 100%;
   vertical-align: bottom;
 }
+.contact-cooperative{
+  padding: 130px 0 0;
+  text-align: center;
+}
+.contact-cooperative-title {
+  font-size: 24px;
+  position: relative;
+}
+.contact-cooperative-title::before {
+  content: 'COOPERATIVE';
+  position: absolute;
+  top: -2.5em;
+  color: #919191;
+  font-size: 16px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.contact-cooperative-streams {
+  font-size: 18px;
+  color: #fff;
+  padding: 68px 0 90px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.contact-cooperative-stream {
+  background: #cd0000;
+}
+.contact-cooperative-code-desc {
+  display: flex;
+  justify-content: center;
+  padding: 96px 0 0;
+}
+.contact-cooperative-code {
+  margin-right: 70px;
+}
+.contact-cooperative-desc {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-cooperative-design {
+  position: relative;
+  padding-left: 64px;
+  margin: 60px 0 0;
+}
+.contact-cooperative-design::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 54px;
+  height: 38px;
+  top: -30%;
+  background: url(../images/contact-logo.png) center no-repeat;
+}
+.contact-cooperative-wechat {
+  position: relative;
+  padding-left: 56px;
+  margin-top: 50px;
+  text-align: left;
+}
+.contact-cooperative-wechat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 54px;
+  height: 32px;
+  top: -30%;
+  background: url(../images/contact-wechat.png) center left no-repeat;
+}
+.contact-company {
+  padding: 180px 0 320px;
+  text-align: center;
+  background: url(../images/contact-search-banner.jpg) center/cover no-repeat;
+}
+.contact-company-title {
+  font-size: 24px;
+  color: #d81617;
+}
+.contact-company-desc {
+  color: #bfbfbf;
+  margin: 40px 0 30px;
+}
+.contact-company-address {
+  color: #bfbfbf;
+}
+.contact-company-phone {
+  color: #bfbfbf;
+  margin: 10px 0;
+}
+.contact-company-location {
+  color: #bfbfbf;
+  margin: 0 0 60px;
+}
+.contact-company-search-input {
+  border: none;
+  width: 328px;
+  height: 36px;
+  padding: 0 28px 0 18px;
+}
+.contact-company-search-up {
+  position: absolute;
+  margin: 9px 0 0 -30px;
+  border-left: 1px solid #d2d2d2;
+  padding: 0 0 3px 8px;
+}
+.contact-company-search-right {
+  display: inline-block;
+  padding: 8px 14px 8px 10px;
+  background: #0071cf;
+  margin-left: -4px;
+  border-radius: 0 4px 4px 0;
+}
+.contact-company-search-right img {
+  vertical-align: bottom;
+}
+
+.contact-together {
+  padding: 180px 0;
+}
+.contact-together-box {
+  width: 1000px;
+  margin: 0 auto;
+}
+.contact-together-title {
+  font-size: 24px;
+  color: #d81617;
+  width: fit-content;
+  position: relative;
+}
+.contact-together-title::before {
+  content: 'PLEASE CONTACT';
+  position: absolute;
+  top: -2em;
+  font-size: 12px;
+  transform: scale(0.5) translate(-42%);
+}
+.contact-together-title::after {
+  content: '';
+  position: absolute;
+  top: -14px;
+  width: 32px;
+  height: 2px;
+  right: 4px;
+  background: #d81617;
+}
+.contact-together-mens {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0 0;
+}
+.contact-together-zilong-wrap,
+.contact-together-phone-wrap {
+  position: absolute;
+}
+.contact-together-phone-wrap {
+  margin-top: -80px;
+  margin-left: 220px;
+}
+.contact-together-zilong-wrap {
+  margin-top: -100px;
+  margin-left: -130px;
+}
+.contact-together-phone {
+  line-height: 22px;
+}
+.contact-together-people {
+  color: #0270d2;
+}
+
+
+
+
