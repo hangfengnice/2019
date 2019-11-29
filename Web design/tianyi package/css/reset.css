@@ -98,7 +98,7 @@ a {
   z-index: 2;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .9);
   padding-top: 0;
   transition: all .25s;
 }
@@ -807,6 +807,9 @@ a {
   text-align: right;
   margin-bottom: 1%;
 }
+.case-location:hover {
+  color: #b31d22;
+}
 #indexgs {
 	margin: 0 auto;
 	top: 100px;
@@ -1146,6 +1149,7 @@ a {
 .contact-cooperative{
   padding: 130px 0 0;
   text-align: center;
+  transition: all .25s;
 }
 .contact-cooperative-title {
   font-size: 24px;
@@ -1160,15 +1164,67 @@ a {
   left: 0;
   right: 0;
   margin: 0 auto;
+  transition: all .25s;
 }
 .contact-cooperative-streams {
+  width: 960px;
+  margin: 0 auto;
   font-size: 18px;
+  letter-spacing: 3px;
   color: #fff;
-  padding: 68px 0 90px;
+  height: 140px;
   border-bottom: 1px solid #dcdcdc;
+  position: relative;
+  padding: 0 0 90px;
+  margin: 64px auto 0;
+  transition: all .25s;
 }
 .contact-cooperative-stream {
-  background: #cd0000;
+  position: absolute;
+  top: 0;
+}
+.contact-cooperative-wrap {
+  width: fit-content;
+  margin: 0 auto;
+}
+.flow1 {
+  left: 0;
+  z-index: 6;
+} 
+ .flow2 {
+  left: 130px;
+  z-index: 5;
+ } 
+ .flow3 {
+  left: 260px;
+  z-index: 4;
+} 
+ .flow4 {
+  left: 390px;
+  z-index: 3;
+ } 
+ .flow5 {
+  left: 520px;
+  z-index: 2;
+} 
+ .flow6 {
+  left: 650px;
+  z-index: 1;
+ } 
+ .flow7 {
+  left: 780px;
+} 
+
+.flowtitle {
+  position: absolute;
+  white-space: nowrap;
+}
+.flowtitle1 {
+  margin: 58px 0 0 16px;
+}
+.flowtitle:not(.flowtitle1) {
+  margin: 44px 0 0 60px;
+  text-align: center;
 }
 .contact-cooperative-code-desc {
   display: flex;
@@ -1195,7 +1251,7 @@ a {
   width: 54px;
   height: 38px;
   top: -30%;
-  background: url(../images/contact-logo.png) center no-repeat;
+  background: url(../images/contact-ty.png) center no-repeat;
 }
 .contact-cooperative-wechat {
   position: relative;
@@ -1215,11 +1271,13 @@ a {
 .contact-company {
   padding: 180px 0 320px;
   text-align: center;
+  transition: all .25s;
   background: url(../images/contact-search-banner.jpg) center/cover no-repeat;
 }
 .contact-company-title {
   font-size: 24px;
   color: #d81617;
+  transition: all .25s;
 }
 .contact-company-desc {
   color: #bfbfbf;
@@ -1236,6 +1294,10 @@ a {
   color: #bfbfbf;
   margin: 0 0 60px;
 }
+.contact-company-search {
+  display: flex;
+  justify-content: center;
+}
 .contact-company-search-input {
   border: none;
   width: 328px;
@@ -1244,27 +1306,28 @@ a {
 }
 .contact-company-search-up {
   position: absolute;
-  margin: 9px 0 0 -30px;
+  margin: 9px 0 0 140px;
   border-left: 1px solid #d2d2d2;
   padding: 0 0 3px 8px;
 }
 .contact-company-search-right {
-  display: inline-block;
-  padding: 8px 14px 8px 10px;
   background: #0071cf;
-  margin-left: -4px;
   border-radius: 0 4px 4px 0;
-}
-.contact-company-search-right img {
-  vertical-align: bottom;
+  width: 57px;
+  height: 36px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-together {
   padding: 180px 0;
+  transition: all .25s;
 }
 .contact-together-box {
   width: 1000px;
   margin: 0 auto;
+  transition: all .25s;
 }
 .contact-together-title {
   font-size: 24px;
@@ -1292,6 +1355,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 80px 0 0;
+  transition: all .25s;
 }
 .contact-together-zilong-wrap,
 .contact-together-phone-wrap {
@@ -1300,10 +1364,12 @@ a {
 .contact-together-phone-wrap {
   margin-top: -80px;
   margin-left: 220px;
+  transition: all .25s;
 }
 .contact-together-zilong-wrap {
   margin-top: -100px;
   margin-left: -130px;
+  transition: all .25s;
 }
 .contact-together-phone {
   line-height: 22px;
@@ -1311,7 +1377,66 @@ a {
 .contact-together-people {
   color: #0270d2;
 }
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  display: none;
+  background-color: #111;
+}
+.close-pc {
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ul-mask {
+  height: 90%;
+  border-top: 2px solid #757575;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.close-pc img {
+  width: 43px;
+  height: 43px;
+  object-fit: cover;
+}
+.mask-li-a {
+  font-size: 40px;
+  color: #757575;
+  letter-spacing: 10px;
+}
+.displayblock {
+  display: block;
+}
+/* nav-img */
+/* phone-nav-img */
+<!-- 遮罩层 -->
+<div class="mask">
+  <div class="box">
+      <div class="close-pc pc"><span></span><img class="mask-close-img" src="./images/close-pc.png" alt=""></div>
+      <div class="close-phone phone"><img class="mask-close-img" src="./images/close.png" alt=""></div>
+  </div>
+  <ul class="ul-mask">
+    <li class="mask-li"><a class="mask-li-a" href="index.html">网站首页</a></li>
+    <li class="mask-li"><a class="mask-li-a" href="case.html#case">案例展示</a></li>
+    <li class="mask-li"><a class="mask-li-a" href="about.html">关于我们</a></li>
+    <li class="mask-li"><a class="mask-li-a" href="dynamic.html">新闻动态</a></li>
+    <li class="mask-li"><a class="mask-li-a" href="contact.html">联系我们</a></li>
+  </ul>
+</div>
 
-
-
-
+$(".nav-img").click(function () {
+  $('.mask').addClass('displayblock')
+})
+$(".phone-nav-img").click(function () {
+  $('.mask').addClass('displayblock')
+})
+$(".mask-close-img").click(function () {
+  $('.mask').removeClass('displayblock')
+})

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>联系</title>
   <link rel="stylesheet" href="css/swiper.css">
@@ -24,13 +24,13 @@
               <a href="index.html" class="nav-li-a">HOME 首页</a>
             </li>
             <li class="nav-li">
-              <a href="#case" class="nav-li-a">CASE 案例</a>
+              <a href="index.html#case" class="nav-li-a">CASE 案例</a>
             </li>
             <li class="nav-li">
               <a href="about.html" class="nav-li-a">ABOUT 我们</a>
             </li>
-            <li class="nav-li"><a href="dynamic.html" class="nav-li-a active">NEWS 动态</a></li>
-            <li class="nav-li"><a href="contact.html" class="nav-li-a">CONTACT 联系</a></li>
+            <li class="nav-li"><a href="dynamic.html" class="nav-li-a">NEWS 动态</a></li>
+            <li class="nav-li"><a href="contact.html" class="nav-li-a active">CONTACT 联系</a></li>
             <li class="nav-li "><img class="nav-img" src="./images/hb.png" alt=""></li>
           </ul>
         </div>
@@ -44,27 +44,66 @@
         <img class="phone-nav-img" src="./images/hb.png" alt="">
       </div>
     </div>
-    
-    <div class="contact-banner pc">
-      <img class="contact-banner-img" src="./images/contact-banner.jpg" alt="">
-    </div>
-
-    <!-- phone container -->
-    <div class="contact-phone-banner phone">
-        <img class="contact-banner-img" src="./images/contact-banner.jpg" azlt="">
+    <!-- banner -->
+    <div class="contact-banner">
+      <img class="contact-banner-img pc" src="./images/contact-banner.jpg" alt="">
+      <img class="contact-banner-img phone" src="./images/contact-banner-phone.jpg" azlt="">
     </div>
     
     <!-- contact cooperative -->
     <div class="contact-cooperative">
       <h3 class="contact-cooperative-title">合作流程</h3>
       <div class="contact-cooperative-streams">
-        <span class="contact-cooperative-stream">商务流程完毕</span>
-        <span class="contact-cooperative-stream">建立专项项目组</span>
-        <span class="contact-cooperative-stream">开启项目启动会议</span>
-        <span class="contact-cooperative-stream">前期项目初步了解</span>
-        <span class="contact-cooperative-stream">输出专业信息提取</span>
-        <span class="contact-cooperative-stream">建立时间推荐表</span>
-        <span class="contact-cooperative-stream">按项目节点提报</span>
+        <div class="contact-cooperative-wrap">
+            <span class="contact-cooperative-stream flow1">
+                <span class="flowtitle flowtitle1">
+                    商务流程完毕
+                </span>
+                <img class="flowimg"  src="./images/folw1.png" alt="">
+            </span>
+            <span class="contact-cooperative-stream flow2">
+                <span class="flowtitle">
+                    建立专项 <br>
+                    项目组
+                </span>
+              <img class="flowimg"  src="./images/folw2.png" alt="">
+            </span>
+            <span class="contact-cooperative-stream flow3">
+                <span class="flowtitle">
+                    开启项目 <br>
+                    启动会议
+                </span>
+              <img class="flowimg"  src="./images/folw3.png" alt="">
+            </span>
+            <span class="contact-cooperative-stream flow4">
+                <span class="flowtitle">
+                    前期项目 <br>
+                    初步了解
+                </span>
+              <img class="flowimg"  src="./images/folw4.png" alt="">
+            </span>
+            <span class="contact-cooperative-stream flow5">
+                <span class="flowtitle">
+                    输出专业  <br>
+                    信息提取
+                </span>
+              <img class="flowimg"  src="./images/folw5.png" alt="">
+            </span>
+            <span class="contact-cooperative-stream flow6">
+                <span class="flowtitle">
+                    建立时间 <br>
+                    推荐表
+                </span>
+              <img class="flowimg"  src="./images/folw6.png" alt="">
+            </span>
+            <span class="contact-cooperative-stream flow7">
+                <span class="flowtitle">
+                    按项目 <br>
+                    节点提报
+                </span>
+              <img class="flowimg"  src="./images/folw7.png" alt="">
+            </span>
+        </div>
       </div>
       <div class="contact-cooperative-code-desc">
         <div class="contact-cooperative-code"><img src="./images/contact-code.png" alt=""></div>
@@ -77,7 +116,8 @@
 
     <!-- contact company -->
     <div class="contact-company">
-      <div class="contact-company-title">杭州天羿文化创意有限公司</div>
+     <div class="box">
+        <div class="contact-company-title">杭州天羿文化创意有限公司</div>
       <div class="contact-company-desc">资深总监级团队；全程有创作人员无缝对接，沟通顺畅力求完美作品</div>
       <div class="contact-company-address">地址：杭州市滨江区环的街 王道公园1-407</div>
       <div class="contact-company-phone">电话：0571-85781913</div>
@@ -87,6 +127,7 @@
         <img class="contact-company-search-up" src="./images/contact-search01.png" alt="">
         <span class="contact-company-search-right"><img src="./images/contact-search02.png" alt=""></span>
       </div>
+     </div>
     </div>
 
     <!-- contact together -->
@@ -95,8 +136,11 @@
       <div class="contact-together-title">合作咨询与对接请联系</div>
       <div class="contact-together-mens">
         <div class="contact-together-men">
-            <img src="./images/contact-t.png" alt="">
+            <img class="contact-together-menimg" src="./images/contact-t.png" alt="">
             <div class="contact-together-phone-wrap">
+                <div class="contact-together-people phone">
+                    资深品牌顾问： 阿狼
+                </div>
                 <div class="contact-together-phone">
                     电话： 177-6715-1777
                 </div>
@@ -105,8 +149,8 @@
                 </div>
             </div>
         </div>
-        <div class="contact-together-men">
-            <img src="./images/contact-y.png" alt="">
+        <div class="contact-together-men active">
+            <img class="contact-together-imgzilong" src="./images/contact-y.png" alt="">
             <div class="contact-together-zilong-wrap">
                 <div class="contact-together-people">
                     资深品牌顾问： 子龙
@@ -187,11 +231,35 @@
       <div class="footer-phone-copyright">Copyright&copy;2017杭州天羿文化创意有限公司版权所有，备案号：浙ICP备16011471号</div>
     </div>
 
+    <!-- 遮罩层 -->
+<div class="mask">
+    <div class="box">
+        <div class="close-pc pc"><span></span><img class="mask-close-img" src="./images/close-pc.png" alt=""></div>
+        <div class="close-phone phone"><img class="mask-close-img" src="./images/close.png" alt=""></div>
+    </div>
+    <ul class="ul-mask">
+      <li class="mask-li"><a class="mask-li-a" href="index.html">网站首页</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="case.html#case">案例展示</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="about.html">关于我们</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="dynamic.html">新闻动态</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+
   <script src="./js/jquery.min.js"></script>
   <script src="./js/swiper.min.js"></script>
   <script src="js/wow.js"></script>
   <script>
     $(document).ready(function () {
+      $(".nav-img").click(function () {
+  $('.mask').addClass('displayblock')
+})
+$(".phone-nav-img").click(function () {
+  $('.mask').addClass('displayblock')
+})
+$(".mask-close-img").click(function () {
+  $('.mask').removeClass('displayblock')
+})
       $(window).scroll(function () { 
         if ($('.nav').offset().top > $('.nav').height()) {
           $('.nav').removeClass('active')

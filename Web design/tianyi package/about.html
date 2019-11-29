@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>关于我们</title>
   <link rel="stylesheet" href="css/reset.css">
@@ -120,7 +120,7 @@
 
     <div class="about-vedio">
       <div class="about-box active">
-        <img class="about-vedio-play" src="./images/about03.jpg" alt="">
+        <!-- <img class="about-vedio-play" src="./images/about03.jpg" alt=""> -->
         <video class="about-vedio-wrap" controls>
           <source src="./tianyi.mp4" type="video/mp4">
         </video>
@@ -235,6 +235,20 @@
         </li>
         
       </ul>
+      <!-- 遮罩层 -->
+<div class="mask">
+    <div class="box">
+        <div class="close-pc pc"><span></span><img class="mask-close-img" src="./images/close-pc.png" alt=""></div>
+        <div class="close-phone phone"><img class="mask-close-img" src="./images/close.png" alt=""></div>
+    </div>
+    <ul class="ul-mask">
+      <li class="mask-li"><a class="mask-li-a" href="index.html">网站首页</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="case.html#case">案例展示</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="about.html">关于我们</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="dynamic.html">新闻动态</a></li>
+      <li class="mask-li"><a class="mask-li-a" href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
 
 
   <script src="./js/jquery.min.js"></script>
@@ -242,6 +256,15 @@
   <script src="js/wow.js"></script>
   <script>
     $(document).ready(function () {
+      $(".nav-img").click(function () {
+  $('.mask').addClass('displayblock')
+})
+$(".phone-nav-img").click(function () {
+  $('.mask').addClass('displayblock')
+})
+$(".mask-close-img").click(function () {
+  $('.mask').removeClass('displayblock')
+})
       $(window).scroll(function () { 
         if ($('.nav').offset().top > $('.nav').height()) {
           $('.nav').removeClass('active')

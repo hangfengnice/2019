@@ -34,7 +34,7 @@
   }
   .nav.active {
     padding-top: 0;
-    transition: all .25s;
+    transition: all 0.25s;
   }
   .nav-span {
     font-size: 16px;
@@ -80,7 +80,7 @@
   .indc-h3 {
     margin: 1.8% 0 5%;
   }
-  
+
   .indc-icon-pic {
     width: 80%;
     margin: 0 auto;
@@ -128,13 +128,15 @@
   .fixed-li:first-child {
     font-size: 16px;
     padding: 3% 0 3% 12%;
-}
-.fixed-li:nth-child(2), .fixed-li:last-child {
-  padding: 3% 0 2% 12%;
-}
-.fixed-li:nth-child(2), .fixed-li:last-child {
-  padding: 2% 0 2% 12%;
-}
+  }
+  .fixed-li:nth-child(2),
+  .fixed-li:last-child {
+    padding: 3% 0 2% 12%;
+  }
+  .fixed-li:nth-child(2),
+  .fixed-li:last-child {
+    padding: 2% 0 2% 12%;
+  }
   /* design 设计 */
   .ind-design {
     padding: 6.6% 0 3%;
@@ -147,7 +149,7 @@
     margin: 18% 0 0;
     border: 1px solid #515151;
     height: 190px;
-   
+
     position: relative;
   }
   .border-wrap-bottom {
@@ -200,7 +202,7 @@
     color: #101010;
     font-size: 18px;
     padding: 0 0 0 3.5%;
-    transition: all .25s;
+    transition: all 0.25s;
   }
   .ind-news-desc {
     font-size: 16px;
@@ -244,76 +246,103 @@
   }
 
   /* 我们的页面 about */
-  
-    /* team */
-    .about-team {
-      padding: 6% 0 6%;
-    }
-    .about-box {
-      width: 80%;
-    }
-    .about-team-line {
-      margin-left: 74%;
-    }
 
-    /* about-profession */
-    .about-profession {
-      padding: 0 0 10%;
-    }
-    .about-profession-title {
-      margin: 2% 0 2%;
-    }
-    /* about-quality */
-    .about-quality {
-      padding: 6% 0 10%;
-    }
-    .about-quality-h3 {
-      margin: 0 0 20px;
-    }
-    .about-quality-h3::before {
-      margin-left: -80px;
-    }
-    .about-quality-left {
-      margin: 0 10% 0 0;
-    }
-
-/* dynamic */
-    .dynamic-box {
+  /* team */
+  .about-team {
+    padding: 6% 0 6%;
+  }
+  .about-box {
     width: 80%;
-    }
-    .dynamic-update-span + span {
-      margin-left: 10%;
-    }
-    .dynamic-update-right {
-      width: 67%;
-    }
-    .dynamic-update-title:before {
-      top: -30px;
-    }
-    .dynamic-create {
-      padding: 0 0 80px;
-    }
-    .dynamic-create-single-title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .dynamic-swiper-content {
-      height: auto;
-    }
-    .dynamic-create-single-time {
-      margin: 14px 0 10px;
-    }
-    .overflow-el {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2; 
-      -webkit-box-orient: vertical;
-    }
-    
+  }
+  .about-team-line {
+    margin-left: 74%;
+  }
+
+  /* about-profession */
+  .about-profession {
+    padding: 0 0 10%;
+  }
+  .about-profession-title {
+    margin: 2% 0 2%;
+  }
+  /* about-quality */
+  .about-quality {
+    padding: 6% 0 10%;
+  }
+  .about-quality-h3 {
+    margin: 0 0 20px;
+  }
+  .about-quality-h3::before {
+    margin-left: -80px;
+  }
+  .about-quality-left {
+    margin: 0 10% 0 0;
+  }
+
+  /* dynamic */
+  .dynamic-box {
+    width: 80%;
+  }
+  .dynamic-update-span + span {
+    margin-left: 10%;
+  }
+  .dynamic-update-right {
+    width: 67%;
+  }
+  .dynamic-update-title:before {
+    top: -30px;
+  }
+  .dynamic-create {
+    padding: 0 0 80px;
+  }
+  .dynamic-create-single-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dynamic-swiper-content {
+    height: auto;
+  }
+  .dynamic-create-single-time {
+    margin: 14px 0 10px;
+  }
+  .overflow-el {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* contact */
+  .contact-cooperative {
+    padding: 80px 0 0;
+  }
+  .contact-cooperative-title::before {
+    top: -2em;
+  }
+  /* contact company  */
+  .contact-company {
+    padding: 120px 0 240px;
+  }
+
+  .contact-together {
+    padding: 120px 0;
+  }
+  .contact-together-box {
+    width: 86.6666%;
+  }
+  .contact-together-phone-wrap {
+    margin-left: 200px;
+  }
+  .contact-together-zilong-wrap {
+    margin-left: -110px;
+  }
+  .contact-together-mens {
+    padding: 60px 0 0;
+  }
 }
-@media (max-width: 1020px)  {
+@media (max-width: 1020px) {
   .box-inner {
     width: 70%;
   }
@@ -353,8 +382,44 @@
   .dynamic-update-span + span {
     margin-left: 9.5%;
   }
+
+  .contact-cooperative-streams {
+    height: 100px;
+    padding: 0 0 60px;
+    margin: 48px auto 0;
+    font-size: 16px;
+    letter-spacing: 0;
+    width: 90%;
+  }
+  .flowimg {
+    width: 150px;
+  }
+  .flowtitle1 {
+    margin: 42px 0 0 16px;
+  }
+  .flowtitle:not(.flowtitle1) {
+    margin: 32px 0 0 54px;
+  }
+  .flow2 {
+    left: 110px;
+  }
+  .flow3 {
+    left: 220px;
+  }
+  .flow4 {
+    left: 330px;
+  }
+  .flow5 {
+    left: 440px;
+  }
+  .flow6 {
+    left: 550px;
+  }
+  .flow7 {
+    left: 660px;
+  }
 }
-@media (max-width: 865px)  {
+@media (max-width: 865px) {
   .nav-span {
     padding: 8px 2px;
   }
@@ -363,7 +428,7 @@
   }
   .ind-cases-li-a {
     padding: 16px 12px;
-  } 
+  }
   .ind-news-h3 {
     width: 11em;
   }
@@ -377,5 +442,41 @@
 
   .dynamic-update-span + span {
     margin-left: 9.1%;
+  }
+  .flowimg {
+    width: 120px;
+  }
+  .contact-cooperative-streams {
+    font-size: 14px;
+  }
+  .flowtitle1 {
+    margin: 34px 0 0 16px;
+  }
+  .flowtitle:not(.flowtitle1) {
+    margin: 24px 0 0 38px;
+  }
+  .flow2 {
+    left: 90px;
+  }
+  .flow3 {
+    left: 180px;
+  }
+  .flow4 {
+    left: 270px;
+  }
+  .flow5 {
+    left: 360px;
+  }
+  .flow6 {
+    left: 450px;
+  }
+  .flow7 {
+    left: 540px;
+  }
+  .contact-together-phone-wrap {
+    margin-top: -130px;
+  }
+  .contact-together-zilong-wrap {
+    margin-top: -70px;
   }
 }

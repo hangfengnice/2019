@@ -315,7 +315,7 @@
   .swiper-container-phone {
     padding: 0 0 120rem / @bs;
   }
-  .swiper-pagination-create-phone.swiper-pagination-bullets
+  .swiper-pagination-create-phone.swiper-pagination-bullets,
   .swiper-pagination-phone.swiper-pagination-bullets,
   .swiper-pagination-phone-news.swiper-pagination-bullets {
     text-align: center;
@@ -357,6 +357,18 @@
   .swiper-pagination-index .swiper-pagination-bullet-active {
     background-color: #818180;
   }
+  .swiper-pagination-create-phone .swiper-pagination-bullet {
+    box-sizing: border-box;
+    height: 15rem / @bs;
+    width: 15rem / @bs;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #111;
+  }
+  .swiper-pagination-create-phone .swiper-pagination-bullet-active {
+    background-color: #a51f24;
+    border-color: #a51f24;
+  }
   
   // footer
   .footer-phone {
@@ -397,8 +409,18 @@
 
   /* case.html */
   .case-cases {
-    padding-bottom: 0;
-
+    padding: 80rem / @bs 0 170rem / @bs;
+  }
+  .case-title {
+    margin: 0 0 42rem / @bs;
+    font-size: 18rem / @bs;
+  }
+  .case-location {
+    font-size: 14rem / @bs;
+    margin: 0 8rem / @bs 16rem / @bs;
+  }
+  .other-banner {
+    margin: 80rem / @bs 0 0;
   }
 
   // about.html
@@ -470,12 +492,12 @@
     background: #111;
   }
   .dynamic-banner-wrap {
-    top: 266rem / @bs;
+    top: 256rem / @bs;
     margin-left: 48%;
   }
   .dynamic-title {
     font-size: 40rem / @bs;
-    margin-bottom: 40rem / @bs;
+    margin-bottom: 36rem / @bs;
   }
   .dynamic-desc {
     font-size: 14.67rem / @bs;
@@ -531,7 +553,7 @@
   .dynamic-create-title-phone::before {
     content: "ORIGINALBYTIANYI";
     position: absolute;
-    top: -16rem / @bs;
+    top: -22rem / @bs;
     color: #fff;
     font-size: 14rem / @bs;
     left: 0;
@@ -541,36 +563,271 @@
   .dynamic-create-title-phone {
     color: #fff;
     font-size: 32rem / @bs;
-    margin: 0 0 90rem / @bs;
+    margin: 0 0 60rem / @bs;
     text-align: center;
     position: relative;
     transition: all .25s;
   }
   .dynimac-swiper-box {
-    padding: 60rem / @bs 0 0 20rem / @bs;
+    padding: 52rem / @bs 0 0 16rem / @bs;
     background: #111;
   }
   .dynimac-news-h3 {
     font-size: 32rem / @bs;
     color: #d81a1e;
-
   }
   .dynimac-news-time {
     font-size: 23.68rem / @bs;
     color: #595959;
-    margin: 32rem / @bs 0 30rem / @bs;
+    margin: 26rem / @bs 0 26rem / @bs;
   }
   .dynimac-news-desc {
     font-size: 26rem / @bs;
     color: #d4d4d4;
     line-height: 38rem / @bs;
-    padding: 0 0 76rem / @bs;
+    padding: 0 0 70rem / @bs;
     width: 17em;
   }
-  .swiper-pagination-create-phone {
+  // contact
+  .contact-cooperative{
+    padding: 55rem / @bs 0 0;
+  }
+  .contact-cooperative-title {
+    font-size: 28rem / @bs;
+  }
+  .contact-cooperative-title::before {
+    top: -24rem / @bs;
+    font-size: 22rem / @bs;
+  }
+  
+  .contact-cooperative-streams {
+    width: 100%;
+    font-size: 16rem / @bs;
+    letter-spacing: 1px;
+    height: 104rem / @bs;
+    padding: 0 0 70rem / @bs;
+    margin: 40rem / @bs 0 0;
+  }
+  .flowimg {
+    width: 130rem / @bs;
+  }
+    .flow1 {
+    left: 22rem / @bs;
+    } 
+    .flow2 {
+    left: 120rem / @bs;
+    } 
+    .flow3 {
+    left: 214rem / @bs;
+    } 
+    .flow4 {
+    left: 310rem / @bs;
+    } 
+    .flow5 {
+    left: 404rem / @bs;
+    } 
+    .flow6 {
+    left: 498rem / @bs;
+    } 
+    .flow7 {
+    left: 592rem / @bs;
+    } 
+.flowtitle1 {
+  margin: 38rem / @bs 0 0 10rem / @bs;
+  color: #111;
+}
+.flowtitle:not(.flowtitle1) {
+  margin: 26rem / @bs 0 0 40rem / @bs;
+}
+  
+.contact-cooperative-code-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56rem / @bs 0 60rem / @bs;
+}
+.contact-cooperative-code {
+  margin-right: 0;
+  width: 184rem / @bs;
+  height: 184rem / @bs;
+  margin: 0 auto;
+}
+.contact-cooperative-code img {
+  width: 100%;
+}
+.contact-cooperative-desc {
+  font-size: 18rem / @bs;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 60rem / @bs 0 ;
+}
+.contact-cooperative-design {
+  padding-left: 52rem / @bs;
+  margin: 0 100rem / @bs 0 0;
+}
+.contact-cooperative-design::before {
+  width: 36rem / @bs;
+  height: 26rem / @bs;
+  top: -3%;
+  background: url(../images/contact-ty-phone.png) center/cover no-repeat;
+}
+.contact-cooperative-wechat {
+  padding-left: 44rem / @bs;
+  margin-top: 0;
+}
+.contact-cooperative-wechat::before {
+  width: 30rem / @bs;
+  height: 26rem / @bs;
+  top: 0;
+  background: url(../images/contact-wechat-phone.png) center/cover no-repeat;
+}
 
+// contact company
+  .contact-company {
+    padding: 180rem / @bs 0 320rem / @bs;
+    background: url(../images/contact-search-banner-phone.jpg) center/cover no-repeat;
+  }
+  .contact-company-title {
+    font-size: 32rem / @bs;
+  }
+  .contact-company-desc {
+    margin: 40rem / @bs 0 26rem / @bs;
+    font-size: 22rem / @bs;
+  }
+  .contact-company-address {
+    font-size: 20rem / @bs;
+  }
+  .contact-company-phone {
+    font-size: 20rem / @bs;
+    margin: 18rem / @bs 0 20rem / @bs;
+  }
+  .contact-company-location {
+    font-size: 20rem / @bs;
+    margin: 0 0 54rem / @bs;
+  }
+  .contact-company-search {
+    display: flex;
+  }
+  .contact-company-search-input {
+    width: 328rem / @bs;
+    height: 36rem / @bs;
+    padding: 0 28rem / @bs 0 18rem / @bs;
+  }
+  .contact-company-search-up {
+    margin: 9rem / @bs 0 0 140rem / @bs;
+    border-left: 1rem / @bs solid #d2d2d2;
+    padding: 0 0 3rem / @bs 8rem / @bs;
+    width: 13rem / @bs;
+    height: 17rem / @bs;
+    object-fit: cover;
+  }
+  .contact-company-search-right {
+    width: 57rem / @bs;
+    height: 36rem / @bs;
+    border-radius: 0 4rem / @bs 4rem / @bs 0;
+  }
+  .contact-company-search-right img {
+    width: 20rem / @bs;
+    height: 20rem / @bs;
+    object-fit: cover;
+  }
+  .contact-together {
+    padding: 110rem / @bs 0 52rem / @bs;
+  }
+  .contact-together-box {
+    width: 86.6666%;
+  }
+  .contact-together-title {
+    font-size: 24rem / @bs;
+    color: #111111;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+  }
+  .contact-together-title::before {
+    content: 'CONSULTATION';
+    top: -2em;
+    font-size: 22rem / @bs;
+    text-align: center;
+    width: 100%;
+    color: #989898;
+    transform: scale(1) translate(0);
+  }
+  .contact-together-title::after {
+    width: 0;
+  }
+  .contact-together-mens {
+    flex-direction: column;
+    padding: 90rem / @bs 0 0;
+  }
+  .contact-together-men {
+    margin: 0 0 52rem / @bs;
+  }
+  .contact-together-menimg,
+  .contact-together-imgzilong {
+    height: 326rem / @bs;
+    object-fit: cover;
+  }
+  .contact-together-menimg {
+    width: 255rem / @bs; 
+  }
+  .contact-together-imgzilong {
+    width: 277rem / @bs; 
+  }
+  .contact-together-phone-wrap {
+    margin-top: -270rem / @bs;
+    margin-left: 350rem / @bs;
+  }
+  .contact-together-men.active {
+    text-align: right;
+  }
+  .contact-together-zilong-wrap {
+    margin-top: -220rem / @bs;
+    margin-left: 34rem / @bs;
+    text-align: left;
+  }
+  .contact-together-people {
+    margin: 0 0 22rem / @bs;
+    color: #111;
+    font-size: 24rem / @bs;
+    white-space: nowrap;
+  }
+  .contact-together-phone,
+  .contact-together-wechate {
+    font-size: 20rem / @bs;
+    color: #3b3b3b;
+    line-height: 38rem / @bs;
+    white-space: nowrap;
   }
 
+  .close-phone {
+    text-align: right;
+  }
+  .mask-close-img {
+    width: 46rem / @bs;
+    height: 46rem / @bs;
+    object-fit: cover;
+    display: inline-block;
+    margin: 42rem / @bs 0;
+  }
+  .ul-mask {
+    height: 100%;
+    border-top: 2px solid #757575;
+    display: block;
+    text-align: center;
+  }
+  .mask-li:first-child {
+    margin: 150rem / @bs 0 0;
+  }
+  .mask-li + li {
+    margin: 130rem / @bs 0 0;
+  }
+  .mask-li-a {
+    font-size: 38rem / @bs;
+    padding: 20px;
+    letter-spacing: 14rem / @bs;
+  }
 
 }
 
@@ -609,11 +866,15 @@
   html {
     font-size: 540px / @no;
   }
+  .contact-cooperative-streams {
+    font-size: 12rem / @bs;
+  }
 }
 @media screen and (max-width: 480px) {
   html {
     font-size: 480px / @no;
   }
+  
 }
 @media screen and (max-width: 424px) {
   html {

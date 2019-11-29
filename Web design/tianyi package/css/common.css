@@ -305,7 +305,8 @@
   .swiper-container-phone {
     padding: 0 0 2.4rem;
   }
-  .swiper-pagination-create-phone.swiper-pagination-bullets .swiper-pagination-phone.swiper-pagination-bullets,
+  .swiper-pagination-create-phone.swiper-pagination-bullets,
+  .swiper-pagination-phone.swiper-pagination-bullets,
   .swiper-pagination-phone-news.swiper-pagination-bullets {
     text-align: center;
     position: absolute;
@@ -346,6 +347,18 @@
   .swiper-pagination-index .swiper-pagination-bullet-active {
     background-color: #818180;
   }
+  .swiper-pagination-create-phone .swiper-pagination-bullet {
+    box-sizing: border-box;
+    height: 0.3rem;
+    width: 0.3rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #111;
+  }
+  .swiper-pagination-create-phone .swiper-pagination-bullet-active {
+    background-color: #a51f24;
+    border-color: #a51f24;
+  }
   .footer-phone {
     padding: 0.5rem 0 2.4%;
     background: #3b3b3b;
@@ -383,7 +396,18 @@
   }
   /* case.html */
   .case-cases {
-    padding-bottom: 0;
+    padding: 1.6rem 0 3.4rem;
+  }
+  .case-title {
+    margin: 0 0 0.84rem;
+    font-size: 0.36rem;
+  }
+  .case-location {
+    font-size: 0.28rem;
+    margin: 0 0.16rem 0.32rem;
+  }
+  .other-banner {
+    margin: 1.6rem 0 0;
   }
   .about-team {
     background: #f3f3f3;
@@ -450,12 +474,12 @@
     background: #111;
   }
   .dynamic-banner-wrap {
-    top: 5.32rem;
+    top: 5.12rem;
     margin-left: 48%;
   }
   .dynamic-title {
     font-size: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.72rem;
   }
   .dynamic-desc {
     font-size: 0.2934rem;
@@ -478,7 +502,7 @@
     margin: 0 auto;
   }
   .dynamic-update-phone-title:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 0.46rem;
     height: 3px;
@@ -487,7 +511,7 @@
     left: 0.48rem;
   }
   .dynamic-update-phone-title:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 0.98rem;
     height: 2px;
@@ -511,7 +535,7 @@
   .dynamic-create-title-phone::before {
     content: "ORIGINALBYTIANYI";
     position: absolute;
-    top: -0.32rem;
+    top: -0.44rem;
     color: #fff;
     font-size: 0.28rem;
     left: 0;
@@ -521,13 +545,13 @@
   .dynamic-create-title-phone {
     color: #fff;
     font-size: 0.64rem;
-    margin: 0 0 1.8rem;
+    margin: 0 0 1.2rem;
     text-align: center;
     position: relative;
     transition: all 0.25s;
   }
   .dynimac-swiper-box {
-    padding: 1.2rem 0 0 0.4rem;
+    padding: 1.04rem 0 0 0.32rem;
     background: #111;
   }
   .dynimac-news-h3 {
@@ -537,14 +561,249 @@
   .dynimac-news-time {
     font-size: 0.4736rem;
     color: #595959;
-    margin: 0.64rem 0 0.6rem;
+    margin: 0.52rem 0 0.52rem;
   }
   .dynimac-news-desc {
     font-size: 0.52rem;
     color: #d4d4d4;
     line-height: 0.76rem;
-    padding: 0 0 1.52rem;
+    padding: 0 0 1.4rem;
     width: 17em;
+  }
+  .contact-cooperative {
+    padding: 1.1rem 0 0;
+  }
+  .contact-cooperative-title {
+    font-size: 0.56rem;
+  }
+  .contact-cooperative-title::before {
+    top: -0.48rem;
+    font-size: 0.44rem;
+  }
+  .contact-cooperative-streams {
+    width: 100%;
+    font-size: 0.32rem;
+    letter-spacing: 1px;
+    height: 2.08rem;
+    padding: 0 0 1.4rem;
+    margin: 0.8rem 0 0;
+  }
+  .flowimg {
+    width: 2.6rem;
+  }
+  .flow1 {
+    left: 0.44rem;
+  }
+  .flow2 {
+    left: 2.4rem;
+  }
+  .flow3 {
+    left: 4.28rem;
+  }
+  .flow4 {
+    left: 6.2rem;
+  }
+  .flow5 {
+    left: 8.08rem;
+  }
+  .flow6 {
+    left: 9.96rem;
+  }
+  .flow7 {
+    left: 11.84rem;
+  }
+  .flowtitle1 {
+    margin: 0.76rem 0 0 0.2rem;
+    color: #111;
+  }
+  .flowtitle:not(.flowtitle1) {
+    margin: 0.52rem 0 0 0.8rem;
+  }
+  .contact-cooperative-code-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.12rem 0 1.2rem;
+  }
+  .contact-cooperative-code {
+    margin-right: 0;
+    width: 3.68rem;
+    height: 3.68rem;
+    margin: 0 auto;
+  }
+  .contact-cooperative-code img {
+    width: 100%;
+  }
+  .contact-cooperative-desc {
+    font-size: 0.36rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.2rem 0;
+  }
+  .contact-cooperative-design {
+    padding-left: 1.04rem;
+    margin: 0 2rem 0 0;
+  }
+  .contact-cooperative-design::before {
+    width: 0.72rem;
+    height: 0.52rem;
+    top: -3%;
+    background: url(../images/contact-ty-phone.png) center / cover no-repeat;
+  }
+  .contact-cooperative-wechat {
+    padding-left: 0.88rem;
+    margin-top: 0;
+  }
+  .contact-cooperative-wechat::before {
+    width: 0.6rem;
+    height: 0.52rem;
+    top: 0;
+    background: url(../images/contact-wechat-phone.png) center / cover no-repeat;
+  }
+  .contact-company {
+    padding: 3.6rem 0 6.4rem;
+    background: url(../images/contact-search-banner-phone.jpg) center / cover
+      no-repeat;
+  }
+  .contact-company-title {
+    font-size: 0.64rem;
+  }
+  .contact-company-desc {
+    margin: 0.8rem 0 0.52rem;
+    font-size: 0.44rem;
+  }
+  .contact-company-address {
+    font-size: 0.4rem;
+  }
+  .contact-company-phone {
+    font-size: 0.4rem;
+    margin: 0.36rem 0 0.4rem;
+  }
+  .contact-company-location {
+    font-size: 0.4rem;
+    margin: 0 0 1.08rem;
+  }
+  .contact-company-search {
+    display: flex;
+  }
+  .contact-company-search-input {
+    width: 6.56rem;
+    height: 0.72rem;
+    padding: 0 0.56rem 0 0.36rem;
+  }
+  .contact-company-search-up {
+    margin: 0.18rem 0 0 2.8rem;
+    border-left: 0.02rem solid #d2d2d2;
+    padding: 0 0 0.06rem 0.16rem;
+    width: 0.26rem;
+    height: 0.34rem;
+    object-fit: cover;
+  }
+  .contact-company-search-right {
+    width: 1.14rem;
+    height: 0.72rem;
+    border-radius: 0 0.08rem 0.08rem 0;
+  }
+  .contact-company-search-right img {
+    width: 0.4rem;
+    height: 0.4rem;
+    object-fit: cover;
+  }
+  .contact-together {
+    padding: 2.2rem 0 1.04rem;
+  }
+  .contact-together-box {
+    width: 86.6666%;
+  }
+  .contact-together-title {
+    font-size: 0.48rem;
+    color: #111111;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+  }
+  .contact-together-title::before {
+    content: "CONSULTATION";
+    top: -2em;
+    font-size: 0.44rem;
+    text-align: center;
+    width: 100%;
+    color: #989898;
+    transform: scale(1) translate(0);
+  }
+  .contact-together-title::after {
+    width: 0;
+  }
+  .contact-together-mens {
+    flex-direction: column;
+    padding: 1.8rem 0 0;
+  }
+  .contact-together-men {
+    margin: 0 0 1.04rem;
+  }
+  .contact-together-menimg,
+  .contact-together-imgzilong {
+    height: 6.52rem;
+    object-fit: cover;
+  }
+  .contact-together-menimg {
+    width: 5.1rem;
+  }
+  .contact-together-imgzilong {
+    width: 5.54rem;
+  }
+  .contact-together-phone-wrap {
+    margin-top: -5.4rem;
+    margin-left: 7rem;
+  }
+  .contact-together-men.active {
+    text-align: right;
+  }
+  .contact-together-zilong-wrap {
+    margin-top: -4.4rem;
+    margin-left: 0.68rem;
+    text-align: left;
+  }
+  .contact-together-people {
+    margin: 0 0 0.44rem;
+    color: #111;
+    font-size: 0.48rem;
+    white-space: nowrap;
+  }
+  .contact-together-phone,
+  .contact-together-wechate {
+    font-size: 0.4rem;
+    color: #3b3b3b;
+    line-height: 0.76rem;
+    white-space: nowrap;
+  }
+  .close-phone {
+    text-align: right;
+  }
+  .mask-close-img {
+    width: 0.92rem;
+    height: 0.92rem;
+    object-fit: cover;
+    display: inline-block;
+    margin: 0.84rem 0;
+  }
+  .ul-mask {
+    height: 100%;
+    border-top: 2px solid #757575;
+    display: block;
+    text-align: center;
+  }
+  .mask-li:first-child {
+    margin: 3rem 0 0;
+  }
+  .mask-li + li {
+    margin: 2.6rem 0 0;
+  }
+  .mask-li-a {
+    font-size: 0.76rem;
+    padding: 20px;
+    letter-spacing: 0.28rem;
   }
 }
 @media screen and (max-width: 720px) {
@@ -555,6 +814,9 @@
 @media screen and (max-width: 540px) {
   html {
     font-size: 36px;
+  }
+  .contact-cooperative-streams {
+    font-size: 0.24rem;
   }
 }
 @media screen and (max-width: 480px) {
