@@ -1412,31 +1412,6 @@ a {
   letter-spacing: 10px;
 }
 .displayblock {
-  display: block;
+  display: block;   
 }
 /* nav-img */
-/* phone-nav-img */
-<!-- 遮罩层 -->
-<div class="mask">
-  <div class="box">
-      <div class="close-pc pc"><span></span><img class="mask-close-img" src="./images/close-pc.png" alt=""></div>
-      <div class="close-phone phone"><img class="mask-close-img" src="./images/close.png" alt=""></div>
-  </div>
-  <ul class="ul-mask">
-    <li class="mask-li"><a class="mask-li-a" href="index.html">网站首页</a></li>
-    <li class="mask-li"><a class="mask-li-a" href="case.html#case">案例展示</a></li>
-    <li class="mask-li"><a class="mask-li-a" href="about.html">关于我们</a></li>
-    <li class="mask-li"><a class="mask-li-a" href="dynamic.html">新闻动态</a></li>
-    <li class="mask-li"><a class="mask-li-a" href="contact.html">联系我们</a></li>
-  </ul>
-</div>
-
-$(".nav-img").click(function () {
-  $('.mask').addClass('displayblock')
-})
-$(".phone-nav-img").click(function () {
-  $('.mask').addClass('displayblock')
-})
-$(".mask-close-img").click(function () {
-  $('.mask').removeClass('displayblock')
-})
