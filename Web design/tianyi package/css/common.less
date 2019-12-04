@@ -11,16 +11,15 @@
   .phone {
     display: block;
   }
+  .case-a:not(.pc) {
+    display: inline-block;
+  }
   /* index */
   .box {
     width: 86.666666%;
   }
   .nav-phone {
     padding: 20rem / @bs 0 12rem / @bs;
-    transition: all .25s;
-  }
-  .nav-phone.active {
-    padding-top: 60rem / @bs;
     transition: all .25s;
   }
   .phone-flex {
@@ -167,6 +166,38 @@
   .ind-brand-single:last-child {
     margin: 0;
   }
+  
+.ind-brand-hover-wrap {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.ind-brand-hover-title {
+  font-size: 46rem / @bs;
+  margin: 160rem / @bs 0 66rem / @bs;
+}
+.ind-brand-hover-desc {
+  margin: 26rem / @bs auto 0;
+  padding: 18rem / @bs 0 30rem / @bs;
+}
+.ind-brand-desc-title {
+  font-size: 40rem / @bs;
+  margin-bottom: 10rem / @bs;
+}
+
+.ind-brand-desc-title::before {
+  width: 90%;
+}
+.ind-brand-desc-title::after {
+  width: 90%;
+}
+
+.ind-brand-desc-bottom {
+  font-size: 24rem / @bs;
+}
 
   // index ind-design-phone
   .ind-design-phone {
@@ -800,6 +831,44 @@
     line-height: 38rem / @bs;
     white-space: nowrap;
   }
+  .box-1150 {
+    width: 86.6666%;
+    display: block;
+  }
+.contact-free {
+  background: #000;
+  padding: 152rem / @bs 0 160rem / @bs;
+}
+.contact-free-title {
+  font-size: 32rem / @bs;
+  padding: 0;
+  text-align: center;
+}
+.contact-free-title::before {
+  content: 'RGEQWRHUGAYSGD';
+  top: -24rem / @bs;
+  font-size: 20rem / @bs;
+  left: 50%;
+  transform: translate(-50%);
+}
+.contact-free-single {
+  padding-left: 34rem / @bs;
+  margin-top: 50rem / @bs;
+  border-left: none;
+}
+.contact-free-single-title {
+  font-size: 32rem / @bs;
+  letter-spacing: 4rem / @bs;
+}
+
+.contact-free-single-ul {
+  margin-top: 30rem / @bs;
+}
+.contact-free-single-li {
+  font-size: 24rem / @bs;
+  line-height: 44rem / @bs;
+}
+
 
   .close-phone {
     text-align: right;
@@ -827,6 +896,10 @@
     font-size: 38rem / @bs;
     padding: 20px;
     letter-spacing: 14rem / @bs;
+  }
+  #map2 {
+    margin-top: 66rem / @bs;
+    height: 640rem / @bs;
   }
 
 }

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-    <nav class="nav active pc">
+    <nav class="nav pc">
       <div class="box flexbox">
         <div class="nav-left">
           <div class="nav-img-left"><img src="./images/logo.png" alt=""></div>
@@ -24,7 +24,7 @@
               <a href="index.html" class="nav-li-a">HOME 首页</a>
             </li>
             <li class="nav-li">
-              <a href="#case" class="nav-li-a">CASE 案例</a>
+              <a href="index.html#case" class="nav-li-a">CASE 案例</a>
             </li>
             <li class="nav-li">
               <a href="about.html" class="nav-li-a active">ABOUT 我们</a>
@@ -149,7 +149,7 @@
             <div class="about-quality-right-one">作为一家专业的电商品牌策划公司</div>
             <div class="about-quality-right-two">天羿可以依靠的是精良专业人才以及良好的外部协作环境</div>
             <div class="about-quality-right-three">天羿始终与专业、专注、中肯的方式为客户提供最具有价值的服务</div>
-            <a class="about-quality-right-button" href="">进入天羿视觉案例专区</a>
+            <a class="about-quality-right-button" href="case.html">进入天羿视觉案例专区</a>
           </div>
         </div>
       </div>
@@ -243,7 +243,10 @@
     </div>
     <ul class="ul-mask">
       <li class="mask-li"><a class="mask-li-a" href="index.html">网站首页</a></li>
-      <li class="mask-li"><a class="mask-li-a" href="case.html#case">案例展示</a></li>
+      <li class="mask-li">
+        <a class="mask-li-a pc" href="index.html#case">案例展示</a>
+        <a class="mask-li-a phone" href="index.html#case-phone">案例展示</a>
+      </li>
       <li class="mask-li"><a class="mask-li-a" href="about.html">关于我们</a></li>
       <li class="mask-li"><a class="mask-li-a" href="dynamic.html">新闻动态</a></li>
       <li class="mask-li"><a class="mask-li-a" href="contact.html">联系我们</a></li>
@@ -265,19 +268,6 @@ $(".phone-nav-img").click(function () {
 $(".mask-close-img").click(function () {
   $('.mask').removeClass('displayblock')
 })
-      $(window).scroll(function () { 
-        if ($('.nav').offset().top > $('.nav').height()) {
-          $('.nav').removeClass('active')
-        } else if ($(window).width() > 1280) {
-          $('.nav').addClass('active')
-        }
-
-        if ($('.nav-phone ').offset().top > $('.nav-phone').height()) {
-          $('.nav-phone ').removeClass('active')
-        } else {
-          $('.nav-phone ').addClass('active')
-        }
-      })
       var mySwiper = new Swiper ('.swiper-container', {
       loop: true, // 循环模式选项
       // 如果需要分页器

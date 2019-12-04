@@ -95,7 +95,7 @@ a {
 .nav, .nav-phone {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 9;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, .9);
@@ -111,10 +111,6 @@ a {
 }
 .nav-right {
   padding: 6px 0 0;
-}
-.nav.active {
-  padding-top: 30px;
-  transition: all .25s;
 }
 .flexbox {
   display: flex;
@@ -353,6 +349,7 @@ a {
   transition: all 0.25s;
   text-align: center;
   position: relative;
+  white-space: nowrap;
 }
 .ind-brand-pic-hover:hover .ind-brand-desc-title::before,
 .ind-brand-pic-hover:hover .ind-brand-desc-title::after {
@@ -406,7 +403,8 @@ a {
 .ind-cases {
   padding: 4.8% 0 4.6%;
 }
-#case {
+#case,
+#case-phone {
   padding-top: 100px;
 }
 .ind-case-nav {
@@ -482,14 +480,16 @@ a {
   background: url(../images/index_arrow-right.png);
 }
 .ind-togo {
-  width: fit-content;
-  margin: 6% auto 0;
+  margin-top: 6%;
+  margin-left: 50%;
+  transform: translate(-50%);
   padding: 10px 70px;
   border: 1px solid;
   border-radius: 20px;
   font-size: 18px;
   color: #c8c8c8;
   transition: all .5s;
+  display: inline-block;
 }
 .ind-togo:hover {
   padding: 10px 50px;
@@ -502,7 +502,7 @@ a {
   color: #919191;
   font-size: 18px;
   /* font-weight: bold; */
-  background: url(../images/index3_eagle.jpg) no-repeat center fixed;
+  background: url(../images/laoying.jpg) no-repeat center fixed;
 }
 .ind-content-flex {
   display: flex;
@@ -658,6 +658,12 @@ a {
 .ind-news-tip:hover .ind-news-desc {
   color: #fff;
 }
+.dynamic-swiper-content:hover .dynamic-create-single-title,
+.dynamic-swiper-content:hover .dynamic-create-single-time, 
+.dynamic-swiper-content:hover .dynamic-create-single-desc {
+  color: #fff;
+}
+.dynamic-swiper-content:hover,
 .ind-news-tip:hover {
   background-color: #b31d22;
 }
@@ -807,7 +813,17 @@ a {
   text-align: right;
   margin-bottom: 1%;
 }
+.case-a {
+  color: #545454;
+  /* display: inline-block; */
+}
+.case-a:not(.pc) {
+  display: none;
+}
 .case-location:hover {
+  color: #b31d22;
+}
+.case-location:hover .case-a {
   color: #b31d22;
 }
 #indexgs {
@@ -990,6 +1006,11 @@ a {
   padding: 17px 10px;
   background: #0270cf;
   color: #fff;
+  transition: all .25s;
+}
+.about-quality-right-button:hover {
+  background: #d81617;
+  border-radius: 6px;
 }
 
 /* dynamic 活动 */
@@ -1069,7 +1090,7 @@ a {
 .dynamic-create {
   border-top: 1px solid transparent;
   transition: all .25s;
-  background: url(../images/dynamic04.jpg) center bottom no-repeat;
+  background: url(../images/dynamic04.png) center bottom no-repeat;
   padding: 0 0 126px;
 }
 .dynamic-create-title::before {
@@ -1362,7 +1383,7 @@ a {
   position: absolute;
 }
 .contact-together-phone-wrap {
-  margin-top: -80px;
+  margin-top: -100px;
   margin-left: 220px;
   transition: all .25s;
 }
@@ -1374,16 +1395,56 @@ a {
 .contact-together-phone {
   line-height: 22px;
 }
+.contact-together-people.pc {
+  color: #da0001;
+}
 .contact-together-people {
   color: #0270d2;
 }
-.mask {
+.contact-free {
+  background: #000;
+  padding: 70px 0 60px;
+}
+.contact-free-title {
+  position: relative;
+  color: #d60001;
+  font-size: 24px;
+  padding-left: 36px;
+}
+.contact-free-single {
+  padding-left: 36px;
+  margin-top: 40px;
+  border-left: 1px solid #d60001;
+  margin-right: 20px;
+}
+.contact-free-single-title {
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #6f7376;
+}
+.contact-free-title::before {
+  content: 'DGAIDA DAGYSGD RGEQWRHUI';
   position: absolute;
+  top: -18px;
+  font-size: 12px;
+  color: #6f7376;
+}
+.contact-free-single-ul {
+  margin-top: 30px;
+}
+.contact-free-single-li {
+  font-size: 16px;
+  color: #bfbfbf;
+  line-height: 36px;
+}
+.mask-video,
+.mask {
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 8;
+  z-index: 10;
   display: none;
   background-color: #111;
 }
@@ -1392,6 +1453,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.mask-li-a:hover {
+  color: #d60001;
+  
 }
 .ul-mask {
   height: 90%;
@@ -1410,8 +1475,19 @@ a {
   font-size: 40px;
   color: #757575;
   letter-spacing: 10px;
+  transition: all .25s;
 }
 .displayblock {
   display: block;   
 }
 /* nav-img */
+
+#map2 {
+  height: 640px;
+  border: solid 1px #cccccc;
+  margin-top: 57px;
+}
+#map2 .BMapLabel,
+#map2 .anchorBL {
+  display: none!important;
+}

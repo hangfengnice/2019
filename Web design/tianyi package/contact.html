@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-    <nav class="nav active pc">
+    <nav class="nav pc">
       <div class="box flexbox">
         <div class="nav-left">
           <div class="nav-img-left"><img src="./images/logo.png" alt=""></div>
@@ -45,10 +45,7 @@
       </div>
     </div>
     <!-- banner -->
-    <div class="contact-banner">
-      <img class="contact-banner-img pc" src="./images/contact-banner.jpg" alt="">
-      <img class="contact-banner-img phone" src="./images/contact-banner-phone.jpg" azlt="">
-    </div>
+    <div id="map2" class="wow fadeInUp"></div>
     
     <!-- contact cooperative -->
     <div class="contact-cooperative">
@@ -119,7 +116,7 @@
      <div class="box">
         <div class="contact-company-title">杭州天羿文化创意有限公司</div>
       <div class="contact-company-desc">资深总监级团队；全程有创作人员无缝对接，沟通顺畅力求完美作品</div>
-      <div class="contact-company-address">地址：杭州市滨江区环的街 王道公园1-407</div>
+      <div class="contact-company-address">地址：杭州市滨江区怀德街 王道公园1-407</div>
       <div class="contact-company-phone">电话：0571-85781913</div>
       <div class="contact-company-location">导航 “天羿视觉” 能显示位置</div>
       <div class="contact-company-search">
@@ -138,6 +135,9 @@
         <div class="contact-together-men">
             <img class="contact-together-menimg" src="./images/contact-t.png" alt="">
             <div class="contact-together-phone-wrap">
+                <div class="contact-together-people pc">
+                    资深品牌顾问： 阿狼
+                </div>
                 <div class="contact-together-people phone">
                     资深品牌顾问： 阿狼
                 </div>
@@ -168,6 +168,34 @@
     </div>
   </div>
 
+  <div class="contact-free">
+    <div class="box-1150">
+        <h3 class="contact-free-title">微薄之力回报恩惠</h3>
+    </div>
+      
+    <div class="box-1150">
+        <div class="contact-free-single">
+          <h3 class="contact-free-single-title">天羿视觉对以下客户免费</h3>
+          <ul class="contact-free-single-ul">
+            <li class="contact-free-single-li">1.天灾造成的灾区公益宣传广告设计；</li>
+            <li class="contact-free-single-li">2.非盈利目的学院，学堂等教育机构页面设计。</li>
+          </ul>
+        </div>
+        <div class="contact-free-single">
+            <h3 class="contact-free-single-title">天羿视觉对以下客户不提供服务</h3>
+            <ul class="contact-free-single-ul">
+              <li class="contact-free-single-li">1.产品的甄别-质量不合格</li>
+              <li class="contact-free-single-li">2.企业负责人初心不对的人</li>
+              <li class="contact-free-single-li">3.违背商业价值观</li>
+            </ul>
+          </div>
+    
+    </div>
+  </div>
+  <!-- 人物图 -->
+  <div class="ind-profile">
+      <img class="ind-profile-img phone"  src="./images/index-profile-phone.png" alt="">
+    </div>
  
   <!-- footer -->
     <footer class="footer pc">
@@ -232,14 +260,17 @@
     </div>
 
     <!-- 遮罩层 -->
-<div class="mask">
+  <div class="mask">
     <div class="box">
         <div class="close-pc pc"><span></span><img class="mask-close-img" src="./images/close-pc.png" alt=""></div>
         <div class="close-phone phone"><img class="mask-close-img" src="./images/close.png" alt=""></div>
     </div>
     <ul class="ul-mask">
       <li class="mask-li"><a class="mask-li-a" href="index.html">网站首页</a></li>
-      <li class="mask-li"><a class="mask-li-a" href="case.html#case">案例展示</a></li>
+      <li class="mask-li">
+        <a class="mask-li-a pc" href="index.html#case">案例展示</a>
+        <a class="mask-li-a phone" href="index.html#case-phone">案例展示</a>
+      </li>
       <li class="mask-li"><a class="mask-li-a" href="about.html">关于我们</a></li>
       <li class="mask-li"><a class="mask-li-a" href="dynamic.html">新闻动态</a></li>
       <li class="mask-li"><a class="mask-li-a" href="contact.html">联系我们</a></li>
@@ -249,47 +280,92 @@
   <script src="./js/jquery.min.js"></script>
   <script src="./js/swiper.min.js"></script>
   <script src="js/wow.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=f0AB6ewzFdoHlfK7yQWavKcLMgjACNwv"></script>
   <script>
     $(document).ready(function () {
       $(".nav-img").click(function () {
-  $('.mask').addClass('displayblock')
-})
-$(".phone-nav-img").click(function () {
-  $('.mask').addClass('displayblock')
-})
-$(".mask-close-img").click(function () {
-  $('.mask').removeClass('displayblock')
-})
-      $(window).scroll(function () { 
-        if ($('.nav').offset().top > $('.nav').height()) {
-          $('.nav').removeClass('active')
-        } else if ($(window).width() > 1280) {
-          $('.nav').addClass('active')
-        }
+      $('.mask').addClass('displayblock')
+    })
+    $(".phone-nav-img").click(function () {
+      $('.mask').addClass('displayblock')
+    })
+    $(".mask-close-img").click(function () {
+      $('.mask').removeClass('displayblock')
+    })
 
-        if ($('.nav-phone ').offset().top > $('.nav-phone').height()) {
-          $('.nav-phone ').removeClass('active')
-        } else {
-          $('.nav-phone ').addClass('active')
-        }
-      })
-      var mySwiper = new Swiper ('.swiper-container-dynamic', {
-        loop: true,
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 80,
-        // 如果需要前进后退按钮
-        navigation: {
-          nextEl: '.swiper-dynamic-next',
-          prevEl: '.swiper-dynamic-prev',
-        },
+    var mySwiper = new Swiper ('.swiper-container-dynamic', {
+      loop: true,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 80,
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-dynamic-next',
+        prevEl: '.swiper-dynamic-prev',
+      }
     })     
-
     /* wow.js */
     new WOW().init();
     })
-   
-  
   </script>
+  <script>
+      $(function () {
+        
+    //创建和初始化地图函数：
+        function initMap() {
+          createMap();//创建地图
+          setMapEvent();//设置地图事件
+          addMapControl();//向地图添加控件
+          addMapOverlay();//向地图添加覆盖物
+          map.setMapStyle({style: 'dark'})
+
+        }
+        function createMap() {
+          map = new BMap.Map("map2");
+          map.centerAndZoom(new BMap.Point(120.187714, 30.1909), 16);
+        }
+    
+        function setMapEvent() {
+          map.enableKeyboard();
+          map.enableDragging();
+          map.enableDoubleClickZoom()
+        }
+        function addMapOverlay() {
+          var markers = [{ content: "地址：杭州市滨江区环的街 王道公园1-407", title: "杭州天羿文化创意有限公司", position: { lat: 30.1909, lng: 120.187714} }];
+          for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+            var marker = new BMap.Marker(point, {
+              icon: new BMap.Icon("images/marker.png", new BMap.Size(64, 76), {
+                imageOffset: new BMap.Size(0, 0)
+              })
+            });
+            var label = new BMap.Label('<div class="inner"><h4>'+markers[index].title+'</h4></div>', { offset: new BMap.Size(0, 5) });
+            var opts = {
+              width: 200,
+              title: markers[index].title,
+              enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            map.addOverlay(marker);
+          };
+        }
+        //向地图添加控件
+        function addMapControl() {
+          var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+          scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+          map.addControl(scaleControl);
+          var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_RIGHT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+          map.addControl(navControl);
+          var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: false });
+          map.addControl(overviewControl);
+        }
+        
+        
+        var map;
+        initMap();
+    
+      })
+    </script>
 </body>
 </html>
