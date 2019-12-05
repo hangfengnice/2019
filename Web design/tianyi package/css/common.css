@@ -128,13 +128,16 @@
   .indc-num {
     font-size: 0.4626rem;
   }
+  .case{
+    border-top: 1.36rem solid transparent;
+  }
   .ind-cases {
     padding: 0;
   }
   .ind-case-phone-nav {
     display: flex;
     justify-content: space-between;
-    margin: 1.36rem 0 0.96rem;
+    margin: 0 0 0.96rem;
   }
   .ind-case-phone-span {
     color: #919191;
@@ -858,10 +861,10 @@
     text-align: center;
   }
   .mask-li:first-child {
-    margin: 3rem 0 0;
+    margin: 2.6rem 0 0;
   }
   .mask-li + li {
-    margin: 2.6rem 0 0;
+    margin: 2.2rem 0 0;
   }
   .mask-li-a {
     font-size: 0.76rem;
@@ -871,6 +874,12 @@
   #map2 {
     margin-top: 1.32rem;
     height: 12.8rem;
+  }
+  .ind-cases-li-a:not(.pc) {
+    display: inline-block;
+  }
+  .ind-cases-li-a {
+    padding: 0.32rem;
   }
 }
 @media screen and (max-width: 720px) {

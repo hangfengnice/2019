@@ -216,6 +216,13 @@
   .ind-togo {
     margin: 4% auto 0;
   }
+  .dynamic-update-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
   /* footer */
   .footer-phone-contact.num-top {
     padding: 5% 0 0;
@@ -284,7 +291,7 @@
     width: 80%;
   }
   .dynamic-update-span + span {
-    margin-left: 10%;
+    margin-left: 11%;
   }
   .dynamic-update-right {
     width: 67%;
@@ -379,10 +386,6 @@
     padding: 16px 23px;
   }
   /*  dynamic */
-  .dynamic-update-span + span {
-    margin-left: 9.5%;
-  }
-
   .contact-cooperative-streams {
     height: 100px;
     padding: 0 0 60px;

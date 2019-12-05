@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/*reset.css*/
+html {
+  font-size: 100px;
+}
+body {
+  font-family: "Microsoft Yahei";
+  font-size: 14px;
+  line-height: 1.42858;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  margin: 0;
+  font-weight: 400;
+}
+body,
+dd,
+dl,
+form,
+ol,
+ul,
+pre {
+  margin: 0;
+}
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 1em;
+  font-family: inherit;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+pre {
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.clearfix::after {
+   content: '';
+   display: table;
+   clear: both;
+}
