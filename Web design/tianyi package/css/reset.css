@@ -222,6 +222,7 @@ a {
   padding: 3.4% 0 7%;
   text-align: center;
   position: relative;
+  background: #303030;
 }
 .fixed-ul {
   position: fixed;
@@ -268,22 +269,24 @@ a {
 }
 .indc-h6 {
   font-size: 16px;
-  color: #aaa;
+  color: #919191;
 }
 .indc-h3 {
   margin: 2.2% 0 5.8%;
   font-size: 24px;
   transition: all 0.25s;
+  color: #fff;
 }
 .indc-h3-server {
   position: relative;
   margin-right: 50px;
+
 }
 .indc-h3-server::after {
   content: "";
   width: 38px;
   height: 2px;
-  background: #111;
+  background: #fff;
   position: absolute;
   top: 50%;
   right: -45px;
@@ -310,7 +313,7 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-left: 2px solid rgb(241, 236, 236);
+  border-left: 2px solid #efefef;
   padding: 0 3%;
 }
 .cases-hover-show {
@@ -394,7 +397,7 @@ a {
   width: 4em;
   margin: 16% auto 4%;
   font-size: 24px;
-  color: #626262;
+  color: #fff;
   transition: all 0.25s;
 }
 .indc-num {
@@ -403,16 +406,20 @@ a {
   color: #ababab;
   transition: all 0.25s;
 }
-
+.casewrap {
+  background: #9c9c9c;
+}
 .case{
-  border-top: 20px solid transparent;
-  /* background: #f4f4f4; */
+  padding-top: 40px;
   display: inline-block;
+  font-size: 0;
+  height: 0;
   /* padding-bottom: 20px; */
 }
 
 .ind-cases {
   padding: 3% 0 4.6%;
+  background: #9c9c9c;
 }
 
 .ind-case-nav {
@@ -420,10 +427,10 @@ a {
   justify-content: space-between;
   font-size: 18px;
   font-weight: bold;
-  margin: 0 0 3.6%;
+  margin: 0 0 4.6%;
 }
 .ind-cases-left {
-  color: #919191;
+  color: #fff;
 }
 .ind-cases-ul {
   width: fit-content;
@@ -471,6 +478,7 @@ a {
   margin: 0 0 3%;
   position: relative;
   transition: all 0.25s;
+  background: #fff;
 }
 .ind-brand-h6 {
   font-size: 24px;
@@ -638,6 +646,7 @@ a {
 /* ind-news */
 .ind-news {
   padding: 3.6% 0;
+  background: #9c9c9c;
 }
 .ind-news-nav {
   display: flex;
@@ -647,7 +656,7 @@ a {
   transition: all 0.25s;
 }
 .ind-new-nav-span {
-  color: #9f9f9f;
+  color: #fff;
 }
 .ind-new-nav-a {
   color: #101010;
@@ -656,7 +665,7 @@ a {
   margin: 3% 0 0;
   line-height: 30px;
   font-size: 18px;
-  color: #c8c8c8;
+  color: #e6e6e6;
   transition: all 0.25s;
 }
 .ind-news-tips {
@@ -669,6 +678,7 @@ a {
   padding: 3% 0 0;
   width: 100%;
   transition: all 0.25s;
+  background: #f8f8f8;
 }
 .ind-news-tip:hover .ind-news-h3,
 .ind-news-tip:hover .ind-news-time,

@@ -5,22 +5,137 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首页</title>
+  <link rel="stylesheet" href="css/swiper.css">
   <link rel="stylesheet" href="css/reset.css">
-    <style>
-      div {
-        font-size: .24rem;
-        width: 0.24rem;
-        height: 0.24rem;
-        background: #000;
-      }
-    
-    </style>
+  
 </head>
 <body>
-  <div>
-    hello hf
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="ind-nav">
+          <div class="box">
+            <h3 class="ind-title">
+              食品安全商家端
+              <img class="ind-title-img" src="./images/home1-01.png" alt="">
+              <span class="ind-title-num">12</span>
+            </h3>
+            
+            <div class="ind-score">
+              <div class="ind-year">
+                <div class="ind-year-top">
+                  <h3 class="ind-desc">上年度综合等级</h3>
+                  <div class="ind-degree">B</div>
+                </div>
+                <div class="ind-year-bottom">
+                  <h3 class="ind-desc active">本年度动态等级</h3>
+                  <div class="ind-degree"><img class="ind-yearimg" src="./images/home1-02.png" alt=""></div>
+                </div>
+              </div>
+              <div class="ind-day">
+                <div class="ind-day-top">
+                  <h3 class="ind-desc">预警次数</h3>
+                  <div class="ind-degree">0</div>
+                </div>
+                <div class="ind-day-bottom">
+                  <h3 class="ind-desc active">安全天数</h3>
+                  <div class="ind-degree">21</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ind-personwrap">
+          <img class="ind-person-img" src="images/person.png" alt="">
+          <span class="ind-person-name">小鱼</span>
+        </div>
+      </div>
+      <div class="swiper-slide">Slide 2</div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
   </div>
-  hello
+
+  <div class="ind-icons">
+    <div class="box">
+      <div class="ind-icons-flex">
+        <a class="ind-icon" href="warn.html">
+          <img style='width: .52rem; height: .52rem;' src="./images/home2-01.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>预警中心</span>
+        </a>
+        <a class="ind-icon" href="sun.html">
+          <img style='width: .55rem; height: .52rem;' src="./images/home2-02.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>阳光厨房</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .56rem; height: .51rem;' src="./images/home2-03.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>量化等级</span>
+        </a>
+        <a class="ind-icon" href="data.html">
+          <img style='width: .49rem; height: .54rem;' src="./images/home2-04.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>食安数据</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .46rem; height: .54rem;' src="./images/home2-05.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>整改信息</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .57rem; height: .54rem;' src="./images/home2-06.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>自检自查</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .61rem; height: .52rem;' src="./images/home2-07.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>政府公告</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .68rem; height: .56rem;' src="./images/home2-08.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>食安培训</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .68rem; height: .43rem;' src="./images/home2-09.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>留样销样</span>
+        </a>
+        <a class="ind-icon" href="">
+          <img style='width: .53rem; height: .53rem;' src="./images/home2-10.png" alt="" class='ind-iconimg'>
+          <span class='ind-icon-desc'>添加栏目</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="ind-footer">
+    <div class="box">
+      <div class="ind-footer-flex">
+        <a href="index.html" class="ind-foot">
+          <img style='width: .45rem; height: .4rem;' src="./images/home3-01.png" alt="" class='ind-footimg'>
+          <span class='ind-foot-desc active'>首页</span>
+        </a>
+        <a href="" class="ind-foot">
+          <img style='width: .44rem; height: .39rem;' src="./images/home3-02.png" alt="" class='ind-footimg'>
+          <span class='ind-foot-desc'>商家服务</span>
+        </a>
+        <a href="" class="ind-foot">
+          <img style='width: .70rem; height: .39rem;' src="./images/home3-03.png" alt="" class='ind-footimg'>
+          <span class='ind-foot-desc'>会员系统</span>
+        </a>
+        <a href="" class="ind-foot">
+          <img style='width: .39rem; height: .39rem;' src="./images/home3-04.png" alt="" class='ind-footimg'>
+          <span class='ind-foot-desc'>商户中心</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
   <script src="js/flexible.js"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+      var swiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+      });
+    </script>
 </body>
 </html>

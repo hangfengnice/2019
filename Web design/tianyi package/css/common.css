@@ -95,6 +95,7 @@
   .indc-h3 {
     margin: 0.4rem 0 1.9rem;
     font-size: 0.56rem;
+    color: #fff;
   }
   .indc-h3-server {
     margin-right: 1.24rem;
@@ -104,6 +105,7 @@
     height: 2px;
     top: 50%;
     right: -1.08rem;
+    background: #fff;
   }
   .indc-icon-wrap-top {
     padding: 0 0 1.2rem;
@@ -128,21 +130,27 @@
   .indc-num {
     font-size: 0.4626rem;
   }
-  .case{
-    border-top: 1.36rem solid transparent;
+  .casewrap {
+    background: #fff;
   }
   .ind-cases {
     padding: 0;
+    background: #fff;
+  }
+  .case {
+    padding-top: 0;
   }
   .ind-case-phone-nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 0.96rem;
+    margin: 1.2rem 0 0.96rem;
   }
   .ind-case-phone-span {
     color: #919191;
-    font-size: 0.44rem;
-    line-height: 0.56rem;
+    font-size: 0.56rem;
+    letter-spacing: 2px;
+    line-height: 0.52rem;
+    font-weight: bold;
   }
   .ind-case-hb-wrap {
     width: 0.8rem;
@@ -292,14 +300,17 @@
   .ind-news {
     width: 100%;
     padding: 1.2rem 0 0;
+    background: #fff;
   }
   .ind-new-nav-span {
     font-size: 0.44rem;
+    color: #919191;
   }
   .ind-news-para {
     font-size: 0.4rem;
     line-height: 0.76rem;
     padding: 0 0 1rem;
+    color: #adadad;
   }
   .ind-news-tip {
     padding: 0.84rem 0 0;
@@ -861,10 +872,10 @@
     text-align: center;
   }
   .mask-li:first-child {
-    margin: 2.6rem 0 0;
+    margin: 3rem 0 0;
   }
   .mask-li + li {
-    margin: 2.2rem 0 0;
+    margin: 2.6rem 0 0;
   }
   .mask-li-a {
     font-size: 0.76rem;
@@ -880,6 +891,9 @@
   }
   .ind-cases-li-a {
     padding: 0.32rem;
+  }
+  #case-phone {
+    padding-top: 3rem;
   }
 }
 @media screen and (max-width: 720px) {

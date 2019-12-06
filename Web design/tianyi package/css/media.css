@@ -73,7 +73,6 @@
   /* <!-- 服务理念 --> */
   .ind-contact {
     padding: 2% 0 6%;
-    background: #f4f4f4;
     text-align: center;
     position: relative;
   }
@@ -94,10 +93,10 @@
   }
   /* <!-- 案例 --> */
   .ind-cases {
-    padding: 4% 0 3.8%;
+    padding: 1% 0 3.8%;
   }
   .ind-case-nav {
-    margin: 0 0 3%;
+    margin: 0 0 3.6%;
   }
   .ind-brand-hover-title {
     font-size: 26px;
@@ -112,6 +111,8 @@
   .ind-brand-desc {
     padding: 4% 0 4% 11.4%;
     margin: 0 0 2.6%;
+   
+
   }
   .ind-brand-h6 {
     font-size: 20px;
@@ -178,6 +179,7 @@
   /* <!-- index news --> */
   .ind-news {
     padding: 3% 0;
+    
   }
   .ind-news-nav {
     font-size: 16px;
@@ -192,6 +194,7 @@
   }
   .ind-news-tip {
     padding: 2.4% 0 0;
+
   }
   .ind-news-h3 {
     font-size: 20px;
@@ -214,7 +217,7 @@
     font-size: 16px;
   }
   .ind-togo {
-    margin: 4% auto 0;
+    margin-top: 4%;
   }
   .dynamic-update-desc {
     overflow: hidden;
