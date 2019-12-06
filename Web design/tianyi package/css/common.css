@@ -895,6 +895,29 @@
   #case-phone {
     padding-top: 3rem;
   }
+  .article {
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .article-title {
+    font-size: 0.64rem;
+    line-height: 0.64rem;
+  }
+  .artitlce-time {
+    margin-top: 0.4rem;
+    padding-bottom: 0.2rem;
+  }
+  .article-para {
+    margin-top: 0.4rem;
+    font-size: 0.28rem;
+    line-height: 0.52rem;
+  }
+  .article-para-title {
+    margin-bottom: 0.2rem;
+  }
+  .article-next-prev {
+    margin-top: 0.4rem;
+  }
 }
 @media screen and (max-width: 720px) {
   html {

@@ -1536,3 +1536,46 @@ a {
 #map2 .anchorBL {
   display: none !important;
 }
+
+/* article */
+
+.article {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.article-title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: bold;
+}
+.article-box {
+  width: 1000px;
+  margin: 0 auto;
+}
+.artitlce-time {
+  color: #888888;
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 1px dashed #cecece;
+  padding-bottom: 10px;
+}
+.article-para {
+  margin-top: 20px;
+  color: #333;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: justify;
+}
+.article-para-title {
+  margin-bottom: 10px;
+}
+.article-next-prev {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.article-prev:hover,
+.article-next:hover {
+  color: #d60001;
+}

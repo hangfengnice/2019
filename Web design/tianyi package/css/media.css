@@ -28,6 +28,9 @@
   }
 }
 @media (max-width: 1280px) {
+  .article-box {
+    width: 80%;
+  }
   .box-1150 {
     width: 80%;
     padding: 2% 0 1.2%;
