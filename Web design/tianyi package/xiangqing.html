@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>artice</title>
+  <title>vipacking</title>
   <link rel="stylesheet" href="css/reset.css?v=3">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/common.css">
+
 </head>
 <body>
     <nav class="nav active pc">
@@ -43,36 +44,28 @@
       </div>
     </div>
       
-    <div class="article">
-      <div class="article-box">
-        <div class="article-title">专注细节臻于完美</div>
-        <div class="artitlce-time">
-          <span>发布时间：</span> <span>2015-07-23</span> <span>信息来源：</span> <span>浏览次数：</span> <span>709</span>
-        </div>
-          <div class="article-para">
-              电商行业的变化很快，视觉包装的潮流风向年年不同，尤其是近几年消费者对于产品的要求以及视觉感受的需求明显提高，更加剧了卖家对视觉包装独特性的需求。在互联网这个每秒都有新变化的世界，无论是个人还是公司都需要在变化中坚守不变的信念。有共同追求和精神价值的团队在急剧变化的电商行业里会有更稳固的根基，这样才能应付未来的变化和风险。一个团队的核心价值就来自于这种共同的信念与态度，因此天羿从成立之时起就非常注重铸造自己的的核心价值，也就是天羿始终坚持不变的设计态度:
-          </div>
-          <div class="article-para">
-              <h3 class="article-para-title">专业</h3>
-              天羿的设计师和摄影师都毕业于中国美术学院相关专业，有着纯熟的设计手法和深厚的美学积淀。以专业的眼光考量视觉包装中的每一处细节，打造极致作品。相信只有专业的力量才能带来最好的视觉包装与视觉营销效果。
-          </div>
-          <div class="article-para">
-              <h3 class="article-para-title">规范</h3>
-              天羿对包装设计有着明确的视觉规范要求，每次视觉包装都有详细的视觉规范方案，从色彩、字体、logo及辅助图形、店招、标签按钮、语言行为、首页层级等进行全面规范统一。优秀的视觉包装是带有风格和个性的，只有严格的视觉规范才能带来专属的风格调性。
-          </div>
-          <div class="article-para">
-              <h3 class="article-para-title">团队</h3>
-              天羿相信团队的力量，我们有一支拥有梦想和活力的年轻团队。团队中每个成员的积极态度都推动着整个团队积极向前发展。自由轻松的团队氛围，让每个人的创意思想自由发挥，在idea的碰撞中激发团队的创造力。
-          </div>
-          <div class="article-para">
-              <h3 class="article-para-title">坚持</h3>
-              天羿坚持对完美的不断追求，对视觉包装中的每一部分精雕细琢，不断修改完善直至最后交稿。我们知道世界上不存在绝对的完美，但依旧执着追求无限接近完美的极致。也许永远不存在最好的设计，但我们保证每一个都是更好的设计。
-          </div>
-          <div class="article-next-prev">
-              <a class="article-prev" href="">上一篇：天羿的态度</a>
-              <a class="article-next" href="">下一篇：电商视觉包装</a>
-            </div>
-      </div>
+    <div class="xiangqing-imgwraps">
+      <img class="xingqing-img pc" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img pc" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img pc" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img pc" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img phone" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img phone" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img phone" src="./images/xiangqing.jpg" alt="">
+      <img class="xingqing-img phone" src="./images/xiangqing.jpg" alt="">
+    </div>
+
+    <div class="xiangqing_btn">
+    	<a href="caselist.aspx" class="xiangqing_menu">
+        <span class="xiangqing-hb"></span>
+        <span class="xiangqing-hb"></span>
+      </a>
+      <a href="caseinfo.aspx?id=186" class="xiangqing_prev"></a>
+      <a href="caseinfo.aspx?id=184" class="xiangqing_next"></a>
+
+      <a href="#" class="xiangqing-back">
+        返回顶部
+      </a>
     </div>
 
     
@@ -174,20 +167,29 @@
 
   
     <script src="./js/jquery.min.js"></script>
-
     <script>
       $(document).ready(function () {
         
-$(".nav-img").click(function () {
-  $('.mask').addClass('displayblock')
-})
-$(".phone-nav-img").click(function () {
-  $('.mask').addClass('displayblock')
-})
-$(".mask-close-img").click(function () {
-  $('.mask').removeClass('displayblock')
-})
-      
+      $(".nav-img").click(function () {
+        $('.mask').addClass('displayblock')
+      })
+      $(".phone-nav-img").click(function () {
+        $('.mask').addClass('displayblock')
+      })
+      $(".mask-close-img").click(function () {
+        $('.mask').removeClass('displayblock')
+      })
+      $(window).scroll(function(){
+        if ($(document).scrollTop() > 60) {
+          $('.xiangqing-back').css("display", "inline-block")
+          $(".xiangqing_btn").css("bottom", 74)
+        } else {
+          $('.xiangqing-back').css("display", "none")
+          $(".xiangqing_btn").css("bottom", 166)
+        }
+
+      });
+  
       })
 
     </script>

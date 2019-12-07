@@ -405,6 +405,12 @@
     padding: 0.5rem 0 2.4%;
     background: #3b3b3b;
     color: #858585;
+    position: relative;
+    z-index: 2;
+  }
+  .xiangqing_btn {
+    bottom: 3.32rem;
+    right: 0.4rem;
   }
   .footer-line {
     font-size: 0.48rem;

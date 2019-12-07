@@ -233,7 +233,7 @@ a {
   white-space: nowrap;
   min-width: 160px;
   transition: all 0.25s;
-  z-index: 2;
+  z-index: 3;
 }
 .fixed-li:first-child {
   color: #cfcfcf;
@@ -1578,4 +1578,86 @@ a {
 .article-prev:hover,
 .article-next:hover {
   color: #d60001;
+}
+.xiangqing-imgwraps {
+  margin-top: 58px;
+}
+.xingqing-img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+.xiangqing_btn {
+  position: fixed;
+  bottom: 166px;
+  right: 160px;
+  width: 33px;
+}
+.xiangqing_menu,
+.xiangqing_prev,
+.xiangqing_next {
+  width: 33px;
+  height: 33px;
+  display: block;
+  margin-bottom: 2px;
+  background: #c5c5c5;
+  text-align: center;
+  color: #fff;
+  line-height: 33px;
+  position: relative;
+}
+.xiangqing_menu:hover,
+.xiangqing_prev:hover,
+.xiangqing_next:hover {
+  background: #d60000;
+}
+.xiangqing-back::before,
+.xiangqing_prev::before,
+.xiangqing_next::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  color: #fff;
+  margin-top: 8px;
+  margin-left: -4px;
+  position: absolute;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+} 
+.xiangqing_prev::before {
+  transform: rotate(45deg);
+}
+.xiangqing_next::before  {
+  transform: rotate(-135deg);
+  margin-left: -12px;
+}
+.xiangqing-back::before {
+  transform: rotate(135deg);
+  margin-left: 6px;
+  margin-top: -20px;
+}
+
+.xiangqing-hb {
+  display: inline-block;
+  width: 8px;
+  margin-top: 4px;
+  height: 5px;
+  color: #fff;
+  border-top: 5px solid;
+  border-bottom: 15px double;
+}
+.xiangqing-back {
+  
+  background: #d60000;
+  position: relative;
+  color: #fff;
+  /* display: inline-block; */
+  text-align: center;
+  padding-top: 32px;
+  margin-top: 20px;
+  transition: all .25s;
+  display: none;
+}
+.xiangqing-back:hover {
+  top: -2px;
 }
