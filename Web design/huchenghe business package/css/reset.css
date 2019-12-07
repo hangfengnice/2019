@@ -68,7 +68,7 @@ a:hover {
 .ind-title-img {
   width: .38rem;
   height: .28rem;
-  object-fit: cover;
+  
   position: absolute;
   margin-left: 1.4rem;
   margin-top: .12rem;
@@ -105,7 +105,7 @@ a:hover {
 .ind-yearimg {
   width: 0.46rem;
   height: 0.46rem;
-  object-fit: cover;
+  
 }
 .ind-desc.active {
   padding-top: .12rem;
@@ -130,7 +130,7 @@ a:hover {
 .ind-person-img {
   width: 1.36rem;
   height: 1.36rem;
-  object-fit: cover;
+  
   margin-top: -.68rem;
   border-radius: 50%;
 }
@@ -162,12 +162,9 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
-.ind-footimg,
-.ind-iconimg {
-  object-fit: cover;
-}
 .ind-icon-desc {
   margin-top: .22rem;
+  color: #afafaf;
 }
 .ind-footer-flex {
   display: flex;
@@ -204,7 +201,7 @@ a:hover {
 .nav-backimg {
   width: 0.18rem;
   height: 0.32rem;
-  object-fit: cover;
+  
   position: absolute;
   margin-left: .1rem;
   margin-top: .04rem;
@@ -231,7 +228,6 @@ a:hover {
 .icon-img {
   width: 0.63rem;
   height: 0.63rem;
-  object-fit: cover;
 }
 .warn-num {
   position: absolute;
@@ -264,7 +260,6 @@ a:hover {
 .data-bus-imgrt,
 .data-bus-imglf {
   position: absolute;
-  object-fit: cover;
 }
 .data-bus-imglf {
   width: 0.6rem;
@@ -291,7 +286,6 @@ a:hover {
   margin-top: -.1rem;
   width: 0.63rem;
   height: 0.63rem;
-  object-fit: cover;
 }
 .data-ai-title {
   padding-left: .86rem;
@@ -323,7 +317,6 @@ a:hover {
   position: absolute;
   width: 0.72rem;
   height: 0.72rem;
-  object-fit: cover;
   margin-top: -.16rem;
   margin-left: .56rem;
 }
